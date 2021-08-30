@@ -5,11 +5,11 @@ safe: true
 highlighter: rouge
 theme: just-the-docs
 url: https://esdmr.github.io
-baseurl: template/
+baseurl: assert/
 
 aux_links:
   "Open repo in GitHub":
-    - https://github.com/esdmr/template/
+    - https://github.com/esdmr/assert/
 
 gist:
   noscript: false
