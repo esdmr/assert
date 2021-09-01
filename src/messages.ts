@@ -1,0 +1,16 @@
+export const DEFAULT_MESSAGE = 'Assertion failed';
+export const IS_NAN = 'Value is NaN';
+export const IS_NULL = 'Value is null';
+export const IS_NULLABLE = 'Value is nullable';
+export const IS_UNDEFINED = 'Value is undefined';
+export const NOT_BIGINT = 'Value is not a big integer';
+export const NOT_BOOLEAN = 'Value is not a boolean';
+export const NOT_FINITE = 'Value is not finite';
+export const NOT_FUNCTION = 'Value is not a function';
+export const NOT_INTEGER = 'Value is not an integer';
+export const NOT_NUMBER = 'Value is not a number';
+export const NOT_OBJECT = 'Value is not an object';
+export const NOT_POSITIVE = 'Value is not positive';
+export const NOT_SAFE_INTEGER = 'Value is not a safe integer';
+export const NOT_STRING = 'Value is not a string';
+export const NOT_SYMBOL = 'Value is not a symbol';
