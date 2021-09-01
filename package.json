@@ -11,7 +11,28 @@
   "exports": {
     ".": {
       "import": "./build/main.js",
-      "types": "./build/main.d.ts"
+      "types": "./build/main.d.ts",
+      "docs": null
+    },
+    "./assert": {
+      "import": "./build/assert.js",
+      "types": "./build/assert.d.ts"
+    },
+    "./errors": {
+      "import": "./build/errors.js",
+      "types": "./build/errors.d.ts"
+    },
+    "./nullables": {
+      "import": "./build/nullables.js",
+      "types": "./build/nullables.d.ts"
+    },
+    "./numbers": {
+      "import": "./build/numbers.js",
+      "types": "./build/numbers.d.ts"
+    },
+    "./types": {
+      "import": "./build/types.js",
+      "types": "./build/types.d.ts"
     }
   },
   "main": "build/main.js",
@@ -80,6 +101,21 @@
     "*": {
       ".": [
         "build/main.d.ts"
+      ],
+      "assert": [
+        "build/assert.d.ts"
+      ],
+      "errors": [
+        "build/errors.d.ts"
+      ],
+      "nullables": [
+        "build/nullables.d.ts"
+      ],
+      "numbers": [
+        "build/numbers.d.ts"
+      ],
+      "types": [
+        "build/types.d.ts"
       ]
     }
   }
