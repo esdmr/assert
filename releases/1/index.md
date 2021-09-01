@@ -5,7 +5,7 @@ has_children: true
 ---
 # releases/1
 
-From commit [6e8a73861e8540def1cb7b75a9f9323eb0df29e8](https://github.com/esdmr/assert/commit/6e8a73861e8540def1cb7b75a9f9323eb0df29e8)
+From commit [dc5d03095dae10e72957eee1a6c9912a377cbee4](https://github.com/esdmr/assert/commit/dc5d03095dae10e72957eee1a6c9912a377cbee4)
 
 ## Packages
 
@@ -13,4 +13,8 @@ From commit [6e8a73861e8540def1cb7b75a9f9323eb0df29e8](https://github.com/esdmr/
 
 |Package|
 |---|
-| [@esdmr/assert](./esdmr.assert.md) |
+| [@esdmr/assert/errors](./esdmr.assert.errors.md) |
+| [@esdmr/assert/nullables](./esdmr.assert.nullables.md) |
+| [@esdmr/assert/assert](./esdmr.assert.assert.md) |
+| [@esdmr/assert/types](./esdmr.assert.types.md) |
+| [@esdmr/assert/numbers](./esdmr.assert.numbers.md) |
