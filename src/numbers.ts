@@ -1,14 +1,20 @@
 import * as messages from './messages.js';
+import { addDetail, format } from './utils.js';
 
 /**
  * Asserts that the given value is not `NaN`.
  *
  * @public
  * @param value - Value to assert.
+ * @param detail - Extra description.
+ * @param args - Format arguments.
  */
-export function isNotNaN (value: number) {
+export function isNotNaN (value: number, detail?: string, ...args: unknown[]) {
 	if (Number.isNaN(value)) {
-		throw new RangeError(messages.IS_NAN);
+		throw new RangeError(format(
+			addDetail(messages.IS_NAN, detail),
+			...args,
+		));
 	}
 }
 
@@ -17,10 +23,15 @@ export function isNotNaN (value: number) {
  *
  * @public
  * @param value - Value to assert.
+ * @param detail - Extra description.
+ * @param args - Format arguments.
  */
-export function isFinite (value: number) {
+export function isFinite (value: number, detail?: string, ...args: unknown[]) {
 	if (!Number.isFinite(value)) {
-		throw new RangeError(messages.NOT_FINITE);
+		throw new RangeError(format(
+			addDetail(messages.NOT_FINITE, detail),
+			...args,
+		));
 	}
 }
 
@@ -30,10 +41,15 @@ export function isFinite (value: number) {
  *
  * @public
  * @param value - Value to assert.
+ * @param detail - Extra description.
+ * @param args - Format arguments.
  */
-export function isAnyInteger (value: number) {
+export function isAnyInteger (value: number, detail?: string, ...args: unknown[]) {
 	if (!Number.isInteger(value)) {
-		throw new RangeError(messages.NOT_INTEGER);
+		throw new RangeError(format(
+			addDetail(messages.NOT_INTEGER, detail),
+			...args,
+		));
 	}
 }
 
@@ -42,10 +58,15 @@ export function isAnyInteger (value: number) {
  *
  * @public
  * @param value - Value to assert.
+ * @param detail - Extra description.
+ * @param args - Format arguments.
  */
-export function isPositive (value: number) {
+export function isPositive (value: number, detail?: string, ...args: unknown[]) {
 	if (value < 0) {
-		throw new RangeError(messages.NOT_POSITIVE);
+		throw new RangeError(format(
+			addDetail(messages.NOT_POSITIVE, detail),
+			...args,
+		));
 	}
 }
 
@@ -54,9 +75,14 @@ export function isPositive (value: number) {
  *
  * @public
  * @param value - Value to assert.
+ * @param detail - Extra description.
+ * @param args - Format arguments.
  */
-export function isSafeInteger (value: number) {
+export function isSafeInteger (value: number, detail?: string, ...args: unknown[]) {
 	if (!Number.isSafeInteger(value)) {
-		throw new RangeError(messages.NOT_SAFE_INTEGER);
+		throw new RangeError(format(
+			addDetail(messages.NOT_SAFE_INTEGER, detail),
+			...args,
+		));
 	}
 }

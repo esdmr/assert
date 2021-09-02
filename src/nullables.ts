@@ -1,14 +1,21 @@
 import * as messages from './messages.js';
+import { addDetail, format } from './utils.js';
 
 /**
  * Asserts that the given value is not `null`.
  *
  * @public
  * @param value - Value to assert.
+ * @param detail - Extra description.
+ * @param args - Format arguments.
  */
-export function isNotNull<T> (value: T | null): asserts value is T {
+export function isNotNull<T> (
+	value: T | null,
+	detail?: string,
+	...args: unknown[]
+): asserts value is T {
 	if (value === null) {
-		throw new TypeError(messages.IS_NULL);
+		throw new TypeError(format(addDetail(messages.IS_NULL, detail), args));
 	}
 }
 
@@ -17,10 +24,16 @@ export function isNotNull<T> (value: T | null): asserts value is T {
  *
  * @public
  * @param value - Value to assert.
+ * @param detail - Extra description.
+ * @param args - Format arguments.
  */
-export function isNonNullable<T> (value: T | null | undefined): asserts value is T {
+export function isNonNullable<T> (
+	value: T | null | undefined,
+	detail?: string,
+	...args: unknown[]
+): asserts value is T {
 	if (value === null || value === undefined) {
-		throw new TypeError(messages.IS_NULLABLE);
+		throw new TypeError(format(addDetail(messages.IS_NULLABLE, detail), args));
 	}
 }
 
@@ -29,9 +42,15 @@ export function isNonNullable<T> (value: T | null | undefined): asserts value is
  *
  * @public
  * @param value - Value to assert.
+ * @param detail - Extra description.
+ * @param args - Format arguments.
  */
-export function isNotUndefined<T> (value: T | undefined): asserts value is T {
+export function isNotUndefined<T> (
+	value: T | undefined,
+	detail?: string,
+	...args: unknown[]
+): asserts value is T {
 	if (value === undefined) {
-		throw new TypeError(messages.IS_UNDEFINED);
+		throw new TypeError(format(addDetail(messages.IS_UNDEFINED, detail), args));
 	}
 }
