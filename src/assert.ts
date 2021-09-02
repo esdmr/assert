@@ -1,4 +1,4 @@
-import { AssertionError } from './errors.js';
+import { AssertionError, WrappedError } from './errors.js';
 import { DEFAULT_MESSAGE } from './messages.js';
 
 /**
@@ -35,4 +35,21 @@ export function assert (
 	}
 
 	throw new AssertionError(format(message, ...args));
+}
+
+/**
+ * Wraps any thrown value. It formats the message provided with the arguments
+ * after that which are stringified via `String`.
+ *
+ * @public
+ * @param thrownValue - The value to wrap.
+ * @param message - The message to include in the error. Formatted with `{}`.
+ * @param args - Format arguments.
+ */
+export function wrap (
+	thrownValue: unknown,
+	message = DEFAULT_MESSAGE,
+	...args: unknown[]
+) {
+	return new WrappedError(format(message, ...args), thrownValue);
 }
