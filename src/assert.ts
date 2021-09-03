@@ -1,24 +1,9 @@
-import { AssertionError } from './errors.js';
+import { AssertionError, WrappedError } from './errors.js';
 import { DEFAULT_MESSAGE } from './messages.js';
+import { format } from './utils.js';
 
 /**
- * Formats strings for `assert` function.
- *
- * @param message - The message to include in the error. Formatted with `{}`.
- * @param args - Format arguments.
- * @returns The formatted string.
- */
-function format (message: string, ...args: unknown[]) {
-	for (const item of args) {
-		message = message.replace('{}', String(item));
-	}
-
-	return message;
-}
-
-/**
- * Asserts that a given condition is true. It formats the message provided with
- * the arguments after that which are stringified via `String`.
+ * Asserts that a given condition is true.
  *
  * @public
  * @param condition - The given condition.
@@ -30,9 +15,23 @@ export function assert (
 	message = DEFAULT_MESSAGE,
 	...args: unknown[]
 ): asserts condition {
-	if (condition) {
-		return;
+	if (!condition) {
+		throw new AssertionError(format(message, ...args));
 	}
+}
 
-	throw new AssertionError(format(message, ...args));
+/**
+ * Wraps any thrown value.
+ *
+ * @public
+ * @param thrownValue - The value to wrap.
+ * @param message - The message to include in the error. Formatted with `{}`.
+ * @param args - Format arguments.
+ */
+export function wrap (
+	thrownValue: unknown,
+	message = DEFAULT_MESSAGE,
+	...args: unknown[]
+) {
+	return new WrappedError(format(message, ...args), thrownValue);
 }

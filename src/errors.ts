@@ -56,9 +56,15 @@ export class AssertionError extends Error {
 export class PrimitiveError extends Error {
 	name = 'PrimitiveError';
 	stack = getErrorMessage(this);
+	readonly value: unknown;
 
-	constructor (readonly value: unknown) {
+	constructor (value: unknown) {
 		super(String(value));
+
+		// This marks the property as not enumerable and not writable.
+		Object.defineProperty(this, 'value', {
+			value,
+		});
 	}
 
 	/**
@@ -97,10 +103,16 @@ export class PrimitiveError extends Error {
  */
 export class WrappedError extends Error {
 	name = 'WrappedError';
+	readonly thrownValue: unknown;
 
-	constructor (message: string, readonly thrownValue: unknown) {
+	constructor (message: string, thrownValue: unknown) {
 		super(message);
 		Error.captureStackTrace(this, WrappedError);
+
+		// This marks the property as not enumerable and not writable.
+		Object.defineProperty(this, 'thrownValue', {
+			value: thrownValue,
+		});
 
 		const error = PrimitiveError.getError(thrownValue);
 		const errorStack = error.stack;

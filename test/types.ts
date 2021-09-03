@@ -1,4 +1,5 @@
 import { test } from 'tap';
+import { testDetail } from './test-util/format.js';
 import * as types from '#src/types.js';
 import * as messages from '#src/messages.js';
 
@@ -40,28 +41,56 @@ function testType (
 
 await test('isBigInt', async (t) => {
 	testType(t, types.isBigInt, messages.NOT_BIGINT, 'bigint');
+
+	testDetail(t, (...args) => {
+		types.isBigInt(undefined, ...args);
+	}, TypeError, messages.NOT_BIGINT);
 });
 
 await test('isBoolean', async (t) => {
 	testType(t, types.isBoolean, messages.NOT_BOOLEAN, 'boolean');
+
+	testDetail(t, (...args) => {
+		types.isBoolean(undefined, ...args);
+	}, TypeError, messages.NOT_BOOLEAN);
 });
 
 await test('isFunction', async (t) => {
 	testType(t, types.isFunction, messages.NOT_FUNCTION, 'function');
+
+	testDetail(t, (...args) => {
+		types.isFunction(undefined, ...args);
+	}, TypeError, messages.NOT_FUNCTION);
 });
 
 await test('isNumber', async (t) => {
 	testType(t, types.isNumber, messages.NOT_NUMBER, 'number');
+
+	testDetail(t, (...args) => {
+		types.isNumber(undefined, ...args);
+	}, TypeError, messages.NOT_NUMBER);
 });
 
 await test('isObject', async (t) => {
 	testType(t, types.isObject, messages.NOT_OBJECT, 'object');
+
+	testDetail(t, (...args) => {
+		types.isObject(undefined, ...args);
+	}, TypeError, messages.NOT_OBJECT);
 });
 
 await test('isString', async (t) => {
 	testType(t, types.isString, messages.NOT_STRING, 'string');
+
+	testDetail(t, (...args) => {
+		types.isString(undefined, ...args);
+	}, TypeError, messages.NOT_STRING);
 });
 
 await test('isSymbol', async (t) => {
 	testType(t, types.isSymbol, messages.NOT_SYMBOL, 'symbol');
+
+	testDetail(t, (...args) => {
+		types.isSymbol(undefined, ...args);
+	}, TypeError, messages.NOT_SYMBOL);
 });

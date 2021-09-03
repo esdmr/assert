@@ -4,10 +4,10 @@ export function parseConfig (json: unknown) {
 	try {
 		assert.isObject(json);
 		assert.isNotNull(json);
-		assert.isString(json.name);
-		assert.isBoolean(json.private);
+		assert.isString(json.name, 'property "name"');
+		assert.isBoolean(json.private, 'property "private"');
 	} catch (error) {
-		throw new assert.WrappedError('Failed to parse config', error);
+		throw assert.wrap(error, 'Failed to parse config');
 	}
 
 	return {

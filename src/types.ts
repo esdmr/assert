@@ -1,4 +1,5 @@
 import * as messages from './messages.js';
+import { addDetail, format } from './utils.js';
 
 /** @public */
 export type FunctionLike =
@@ -14,10 +15,19 @@ export type ObjectLike = Record<string, unknown>;
  *
  * @public
  * @param value - Value to assert.
+ * @param detail - Extra description.
+ * @param args - Format arguments.
  */
-export function isBigInt (value: unknown): asserts value is bigint {
+export function isBigInt (
+	value: unknown,
+	detail?: string,
+	...args: unknown[]
+): asserts value is bigint {
 	if (typeof value !== 'bigint') {
-		throw new TypeError(messages.NOT_BIGINT);
+		throw new TypeError(format(
+			addDetail(messages.NOT_BIGINT, detail),
+			...args,
+		));
 	}
 }
 
@@ -26,10 +36,19 @@ export function isBigInt (value: unknown): asserts value is bigint {
  *
  * @public
  * @param value - Value to assert.
+ * @param detail - Extra description.
+ * @param args - Format arguments.
  */
-export function isBoolean (value: unknown): asserts value is boolean {
+export function isBoolean (
+	value: unknown,
+	detail?: string,
+	...args: unknown[]
+): asserts value is boolean {
 	if (typeof value !== 'boolean') {
-		throw new TypeError(messages.NOT_BOOLEAN);
+		throw new TypeError(format(
+			addDetail(messages.NOT_BOOLEAN, detail),
+			...args,
+		));
 	}
 }
 
@@ -38,10 +57,19 @@ export function isBoolean (value: unknown): asserts value is boolean {
  *
  * @public
  * @param value - Value to assert.
+ * @param detail - Extra description.
+ * @param args - Format arguments.
  */
-export function isFunction (value: unknown): asserts value is FunctionLike {
+export function isFunction (
+	value: unknown,
+	detail?: string,
+	...args: unknown[]
+): asserts value is FunctionLike {
 	if (typeof value !== 'function') {
-		throw new TypeError(messages.NOT_FUNCTION);
+		throw new TypeError(format(
+			addDetail(messages.NOT_FUNCTION, detail),
+			...args,
+		));
 	}
 }
 
@@ -50,10 +78,19 @@ export function isFunction (value: unknown): asserts value is FunctionLike {
  *
  * @public
  * @param value - Value to assert.
+ * @param detail - Extra description.
+ * @param args - Format arguments.
  */
-export function isNumber (value: unknown): asserts value is number {
+export function isNumber (
+	value: unknown,
+	detail?: string,
+	...args: unknown[]
+): asserts value is number {
 	if (typeof value !== 'number') {
-		throw new TypeError(messages.NOT_NUMBER);
+		throw new TypeError(format(
+			addDetail(messages.NOT_NUMBER, detail),
+			...args,
+		));
 	}
 }
 
@@ -63,10 +100,19 @@ export function isNumber (value: unknown): asserts value is number {
  *
  * @public
  * @param value - Value to assert.
+ * @param detail - Extra description.
+ * @param args - Format arguments.
  */
-export function isObject (value: unknown): asserts value is ObjectLike | null {
+export function isObject (
+	value: unknown,
+	detail?: string,
+	...args: unknown[]
+): asserts value is ObjectLike | null {
 	if (typeof value !== 'object') {
-		throw new TypeError(messages.NOT_OBJECT);
+		throw new TypeError(format(
+			addDetail(messages.NOT_OBJECT, detail),
+			...args,
+		));
 	}
 }
 
@@ -75,10 +121,19 @@ export function isObject (value: unknown): asserts value is ObjectLike | null {
  *
  * @public
  * @param value - Value to assert.
+ * @param detail - Extra description.
+ * @param args - Format arguments.
  */
-export function isString (value: unknown): asserts value is string {
+export function isString (
+	value: unknown,
+	detail?: string,
+	...args: unknown[]
+): asserts value is string {
 	if (typeof value !== 'string') {
-		throw new TypeError(messages.NOT_STRING);
+		throw new TypeError(format(
+			addDetail(messages.NOT_STRING, detail),
+			...args,
+		));
 	}
 }
 
@@ -87,9 +142,18 @@ export function isString (value: unknown): asserts value is string {
  *
  * @public
  * @param value - Value to assert.
+ * @param detail - Extra description.
+ * @param args - Format arguments.
  */
-export function isSymbol (value: unknown): asserts value is symbol {
+export function isSymbol (
+	value: unknown,
+	detail?: string,
+	...args: unknown[]
+): asserts value is symbol {
 	if (typeof value !== 'symbol') {
-		throw new TypeError(messages.NOT_SYMBOL);
+		throw new TypeError(format(
+			addDetail(messages.NOT_SYMBOL, detail),
+			...args,
+		));
 	}
 }
