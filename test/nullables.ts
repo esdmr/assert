@@ -1,4 +1,5 @@
 import { test } from 'tap';
+import { testDetail } from './test-util/format.js';
 import * as nullables from '#src/nullables.js';
 import * as messages from '#src/messages.js';
 
@@ -17,6 +18,10 @@ await test('isNull', async (t) => {
 		},
 		'expected to not throw an error if the value is not null',
 	);
+
+	testDetail(t, (...args) => {
+		nullables.isNotNull(null, ...args);
+	}, TypeError, messages.IS_NULL);
 });
 
 await test('isNonNullable', async (t) => {
@@ -42,6 +47,10 @@ await test('isNonNullable', async (t) => {
 		},
 		'expected to not throw an error if the value is not nullable',
 	);
+
+	testDetail(t, (...args) => {
+		nullables.isNonNullable(undefined, ...args);
+	}, TypeError, messages.IS_NULLABLE);
 });
 
 await test('isNotUndefined', async (t) => {
@@ -59,4 +68,8 @@ await test('isNotUndefined', async (t) => {
 		},
 		'expected to not throw an error if the value is not undefined',
 	);
+
+	testDetail(t, (...args) => {
+		nullables.isNotUndefined(undefined, ...args);
+	}, TypeError, messages.IS_UNDEFINED);
 });

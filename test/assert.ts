@@ -1,30 +1,35 @@
 import { test } from 'tap';
-import { assert } from '#src/assert.js';
-import { AssertionError } from '#src/errors.js';
+import { testFormat } from './test-util/format.js';
+import { assert, wrap } from '#src/assert.js';
+import { AssertionError, WrappedError } from '#src/errors.js';
 import { DEFAULT_MESSAGE } from '#src/messages.js';
 
 await test('assert', async (t) => {
-	t.doesNotThrow(() => {
-		assert(true, 'This should not throw');
-	}, 'expected to not throw if condition is true');
+	t.doesNotThrow(
+		() => {
+			assert(true, 'This should not throw');
+		},
+		'expected to not throw if condition is true',
+	);
 
-	t.throws(() => {
-		assert(false, 'This should throw');
-	}, 'expected to throw if condition is true');
+	t.throws(
+		() => {
+			assert(false);
+		},
+		new AssertionError(DEFAULT_MESSAGE),
+		'expected to throw the default message if condition is false',
+	);
 
-	t.throws(() => {
-		assert(false);
-	}, new AssertionError(DEFAULT_MESSAGE));
+	testFormat(t, (...args) => {
+		assert(false, ...args);
+	}, (message: string) => new AssertionError(message));
+});
 
-	t.throws(() => {
-		assert(false, 'Custom message (arity 0)');
-	}, new AssertionError('Custom message (arity 0)'));
+await test('wrap', async (t) => {
+	t.strictSame(wrap('value'), wrap('value', DEFAULT_MESSAGE),
+		'expected to use the default message if not given one');
 
-	t.throws(() => {
-		assert(false, '1{}3 (arity 1)', '(2)');
-	}, new AssertionError('1(2)3 (arity 1)'));
-
-	t.throws(() => {
-		assert(false, '1{}3{}5 (arity 2)', '(2)', '(4)');
-	}, new AssertionError('1(2)3(4)5 (arity 2)'));
+	testFormat(t, (...args) => {
+		throw wrap('value', ...args);
+	}, (message: string) => new WrappedError(message, 'value'));
 });

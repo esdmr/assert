@@ -1,4 +1,5 @@
 import { test } from 'tap';
+import { testDetail } from './test-util/format.js';
 import * as numbers from '#src/numbers.js';
 import * as messages from '#src/messages.js';
 
@@ -56,6 +57,10 @@ await test('isNotNaN', async (t) => {
 	testFloat(t, numbers.isNotNaN, messages.IS_NAN, {
 		NaN: false,
 	});
+
+	testDetail(t, (...args) => {
+		numbers.isNotNaN(Number.NaN, ...args);
+	}, RangeError, messages.IS_NAN);
 });
 
 await test('isFinite', async (t) => {
@@ -64,6 +69,10 @@ await test('isFinite', async (t) => {
 		NEGATIVE_INFINITY: false,
 		NaN: false,
 	});
+
+	testDetail(t, (...args) => {
+		numbers.isFinite(Number.POSITIVE_INFINITY, ...args);
+	}, RangeError, messages.NOT_FINITE);
 });
 
 await test('isAnyInteger', async (t) => {
@@ -80,6 +89,10 @@ await test('isAnyInteger', async (t) => {
 		NEGATIVE_MIN_VALUE: false,
 		NaN: false,
 	});
+
+	testDetail(t, (...args) => {
+		numbers.isAnyInteger(0.5, ...args);
+	}, RangeError, messages.NOT_INTEGER);
 });
 
 await test('isPositive', async (t) => {
@@ -93,6 +106,10 @@ await test('isPositive', async (t) => {
 		NEGATIVE_MAX_VALUE: false,
 		NEGATIVE_MIN_VALUE: false,
 	});
+
+	testDetail(t, (...args) => {
+		numbers.isPositive(-1, ...args);
+	}, RangeError, messages.NOT_POSITIVE);
 });
 
 await test('isSafeInteger', async (t) => {
@@ -111,4 +128,8 @@ await test('isSafeInteger', async (t) => {
 		NEGATIVE_MIN_VALUE: false,
 		NaN: false,
 	});
+
+	testDetail(t, (...args) => {
+		numbers.isSafeInteger(0.5, ...args);
+	}, RangeError, messages.NOT_SAFE_INTEGER);
 });
