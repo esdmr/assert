@@ -15,7 +15,7 @@ export function isNotNull<T> (
 	...args: unknown[]
 ): asserts value is T {
 	if (value === null) {
-		throw new TypeError(format(addDetail(messages.IS_NULL, detail), args));
+		throw new TypeError(format(addDetail(messages.IS_NULL, detail), ...args));
 	}
 }
 
@@ -33,7 +33,7 @@ export function isNonNullable<T> (
 	...args: unknown[]
 ): asserts value is T {
 	if (value === null || value === undefined) {
-		throw new TypeError(format(addDetail(messages.IS_NULLABLE, detail), args));
+		throw new TypeError(format(addDetail(messages.IS_NULLABLE, detail), ...args));
 	}
 }
 
@@ -51,6 +51,6 @@ export function isNotUndefined<T> (
 	...args: unknown[]
 ): asserts value is T {
 	if (value === undefined) {
-		throw new TypeError(format(addDetail(messages.IS_UNDEFINED, detail), args));
+		throw new TypeError(format(addDetail(messages.IS_UNDEFINED, detail), ...args));
 	}
 }
