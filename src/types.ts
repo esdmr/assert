@@ -10,6 +10,11 @@ export type FunctionLike =
 /** @public */
 export type ObjectLike = Record<string, unknown>;
 
+/** @public */
+export type TypedConstructor<T> =
+	| (new (...args: unknown[]) => T)
+	| (abstract new (...args: unknown[]) => T);
+
 /**
  * Asserts that the given value is a big integer.
  *
@@ -68,6 +73,30 @@ export function isFunction (
 	if (typeof value !== 'function') {
 		throw new TypeError(format(
 			addDetail(messages.NOT_FUNCTION, detail),
+			...args,
+		));
+	}
+}
+
+/**
+ * Asserts that the given value is an instance of a constructor.
+ *
+ * @public
+ * @param value - Value to assert.
+ * @param Constructor - The constructor to check value with.
+ * @param detail - Extra description.
+ * @param args - Format arguments.
+ */
+export function isInstanceOf<T> (
+	value: unknown,
+	Constructor: TypedConstructor<T>,
+	detail?: string,
+	...args: unknown[]
+): asserts value is T {
+	if (!(value instanceof Constructor)) {
+		throw new TypeError(format(
+			addDetail(messages.NOT_INSTANCE_OF, detail),
+			Constructor.name,
 			...args,
 		));
 	}
