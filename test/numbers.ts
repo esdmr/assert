@@ -58,7 +58,7 @@ await test('isNotNaN', async (t) => {
 		NaN: false,
 	});
 
-	testDetail(t, (...args) => {
+	await testDetail(t, (...args) => {
 		numbers.isNotNaN(Number.NaN, ...args);
 	}, RangeError, messages.IS_NAN);
 });
@@ -70,7 +70,7 @@ await test('isFinite', async (t) => {
 		NaN: false,
 	});
 
-	testDetail(t, (...args) => {
+	await testDetail(t, (...args) => {
 		numbers.isFinite(Number.POSITIVE_INFINITY, ...args);
 	}, RangeError, messages.NOT_FINITE);
 });
@@ -90,7 +90,7 @@ await test('isAnyInteger', async (t) => {
 		NaN: false,
 	});
 
-	testDetail(t, (...args) => {
+	await testDetail(t, (...args) => {
 		numbers.isAnyInteger(0.5, ...args);
 	}, RangeError, messages.NOT_INTEGER);
 });
@@ -107,7 +107,7 @@ await test('isPositive', async (t) => {
 		NEGATIVE_MIN_VALUE: false,
 	});
 
-	testDetail(t, (...args) => {
+	await testDetail(t, (...args) => {
 		numbers.isPositive(-1, ...args);
 	}, RangeError, messages.NOT_POSITIVE);
 });
@@ -129,7 +129,7 @@ await test('isSafeInteger', async (t) => {
 		NaN: false,
 	});
 
-	testDetail(t, (...args) => {
+	await testDetail(t, (...args) => {
 		numbers.isSafeInteger(0.5, ...args);
 	}, RangeError, messages.NOT_SAFE_INTEGER);
 });

@@ -86,19 +86,21 @@ await test('WrappedError', async (t) => {
 		const originalError = errors.PrimitiveError.getError(object);
 		const error = new errors.WrappedError(WRAPPER_MESSAGE, object);
 
-		t.equal(error.name, 'WrappedError',
-			'expected to have a correct name');
+		await t.test(`Value: ${String(object)}`, async (t) => {
+			t.equal(error.name, 'WrappedError',
+				'expected to have a correct name');
 
-		t.equal(error.message, WRAPPER_MESSAGE,
-			'expected to have a correct message');
+			t.equal(error.message, WRAPPER_MESSAGE,
+				'expected to have a correct message');
 
-		t.equal(error.thrownValue, object,
-			'expected to have a store the original thrown value');
+			t.equal(error.thrownValue, object,
+				'expected to have a store the original thrown value');
 
-		t.ok(
-			error.stack?.startsWith(`WrappedError: ${WRAPPER_MESSAGE}\n`
+			t.ok(
+				error.stack?.startsWith(`WrappedError: ${WRAPPER_MESSAGE}\n`
 				+ `${originalError.name}: ${originalError.message}`),
-			'expected to have a store the original thrown value',
-		);
+				'expected to have a correct stack message',
+			);
+		});
 	}
 });

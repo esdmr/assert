@@ -20,7 +20,7 @@ await test('assert', async (t) => {
 		'expected to throw the default message if condition is false',
 	);
 
-	testFormat(t, (...args) => {
+	await testFormat(t, (...args) => {
 		assert(false, ...args);
 	}, (message: string) => new AssertionError(message));
 });
@@ -29,7 +29,7 @@ await test('wrap', async (t) => {
 	t.strictSame(wrap('value'), wrap('value', DEFAULT_MESSAGE),
 		'expected to use the default message if not given one');
 
-	testFormat(t, (...args) => {
+	await testFormat(t, (...args) => {
 		throw wrap('value', ...args);
 	}, (message: string) => new WrappedError(message, 'value'));
 });
