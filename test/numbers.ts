@@ -2,6 +2,7 @@ import { test } from 'tap';
 import { testDetail } from '#test/test-util/format.js';
 import * as numbers from '#src/numbers.js';
 import * as messages from '#src/messages.js';
+import { format } from '#src/utils.js';
 
 const floatValues = {
 	[-1.5]: -1.5,
@@ -132,4 +133,130 @@ await test('isSafeInteger', async (t) => {
 	await testDetail(t, (...args) => {
 		numbers.isSafeInteger(0.5, ...args);
 	}, RangeError, messages.NOT_SAFE_INTEGER);
+});
+
+await test('isGreater', async (t) => {
+	const message = format(messages.NOT_GREATER, 0);
+	const error = new RangeError(message);
+
+	t.doesNotThrow(
+		() => {
+			numbers.isGreater(1, 0);
+		},
+		'expected not to throw for larger values',
+	);
+
+	t.throws(
+		() => {
+			numbers.isGreater(0, 0);
+		},
+		error,
+		'expected to throw for equal values',
+	);
+
+	t.throws(
+		() => {
+			numbers.isGreater(-1, 0);
+		},
+		error,
+		'expected to throw for smaller values',
+	);
+
+	await testDetail(t, (...args) => {
+		numbers.isGreater(-1, 0, ...args);
+	}, (message: string) => new RangeError(message), message);
+});
+
+await test('isGreaterOrEqual', async (t) => {
+	const message = format(messages.NOT_GREATER_OR_EQUAL, 0);
+	const error = new RangeError(message);
+
+	t.doesNotThrow(
+		() => {
+			numbers.isGreaterOrEqual(1, 0);
+		},
+		'expected not to throw for larger values',
+	);
+
+	t.doesNotThrow(
+		() => {
+			numbers.isGreaterOrEqual(0, 0);
+		},
+		'expected not to throw for equal values',
+	);
+
+	t.throws(
+		() => {
+			numbers.isGreaterOrEqual(-1, 0);
+		},
+		error,
+		'expected to throw for smaller values',
+	);
+
+	await testDetail(t, (...args) => {
+		numbers.isGreaterOrEqual(-1, 0, ...args);
+	}, (message: string) => new RangeError(message), message);
+});
+
+await test('isLess', async (t) => {
+	const message = format(messages.NOT_LESS, 0);
+	const error = new RangeError(message);
+
+	t.throws(
+		() => {
+			numbers.isLess(1, 0);
+		},
+		error,
+		'expected not to throw for larger values',
+	);
+
+	t.throws(
+		() => {
+			numbers.isLess(0, 0);
+		},
+		error,
+		'expected to throw for equal values',
+	);
+
+	t.doesNotThrow(
+		() => {
+			numbers.isLess(-1, 0);
+		},
+		'expected to throw for smaller values',
+	);
+
+	await testDetail(t, (...args) => {
+		numbers.isLess(1, 0, ...args);
+	}, (message: string) => new RangeError(message), message);
+});
+
+await test('isLessOrEqual', async (t) => {
+	const message = format(messages.NOT_LESS_OR_EQUAL, 0);
+	const error = new RangeError(message);
+
+	t.throws(
+		() => {
+			numbers.isLessOrEqual(1, 0);
+		},
+		error,
+		'expected not to throw for larger values',
+	);
+
+	t.doesNotThrow(
+		() => {
+			numbers.isLessOrEqual(0, 0);
+		},
+		'expected to throw for equal values',
+	);
+
+	t.doesNotThrow(
+		() => {
+			numbers.isLessOrEqual(-1, 0);
+		},
+		'expected to throw for smaller values',
+	);
+
+	await testDetail(t, (...args) => {
+		numbers.isLessOrEqual(1, 0, ...args);
+	}, (message: string) => new RangeError(message), message);
 });
