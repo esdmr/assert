@@ -11,9 +11,13 @@ parent: releases/1
 
 |  Function | Description |
 |  --- | --- |
-|  [isAnyInteger(value)](./esdmr.assert.numbers.isanyinteger.md) | Asserts that the given value is an integer. The integer may potentially be not safe. |
-|  [isFinite\_2(value)](./esdmr.assert.numbers.isfinite_2.md) | Asserts that the given value is finite (Not <code>±Infinity</code> or <code>NaN</code>). |
-|  [isNotNaN(value)](./esdmr.assert.numbers.isnotnan.md) | Asserts that the given value is not <code>NaN</code>. |
-|  [isPositive(value)](./esdmr.assert.numbers.ispositive.md) | Asserts that the given value is positive. Negative zero is considered positive. |
-|  [isSafeInteger(value)](./esdmr.assert.numbers.issafeinteger.md) | Asserts that the given value is a safe integer. |
+|  [isAnyInteger(value, detail, args)](./esdmr.assert.numbers.isanyinteger.md) | Asserts that the given value is an integer. The integer may potentially be not safe. |
+|  [isFinite\_2(value, detail, args)](./esdmr.assert.numbers.isfinite_2.md) | Asserts that the given value is finite (Not <code>±Infinity</code> or <code>NaN</code>). |
+|  [isGreater(value, minimum, detail, args)](./esdmr.assert.numbers.isgreater.md) | Asserts that the given value is greater than the given minimum value. |
+|  [isGreaterOrEqual(value, minimum, detail, args)](./esdmr.assert.numbers.isgreaterorequal.md) | Asserts that the given value is greater than or equal to the given minimum value. |
+|  [isLess(value, maximum, detail, args)](./esdmr.assert.numbers.isless.md) | Asserts that the given value is less than the given maximum value. |
+|  [isLessOrEqual(value, maximum, detail, args)](./esdmr.assert.numbers.islessorequal.md) | Asserts that the given value is less than or equal to the given maximum value. |
+|  [isNotNaN(value, detail, args)](./esdmr.assert.numbers.isnotnan.md) | Asserts that the given value is not <code>NaN</code>. |
+|  [isPositive(value, detail, args)](./esdmr.assert.numbers.ispositive.md) | Asserts that the given value is positive. Negative zero is considered positive. |
+|  [isSafeInteger(value, detail, args)](./esdmr.assert.numbers.issafeinteger.md) | Asserts that the given value is a safe integer. |
 

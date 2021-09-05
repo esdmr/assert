@@ -11,13 +11,14 @@ parent: releases/1
 
 |  Function | Description |
 |  --- | --- |
-|  [isBigInt(value)](./esdmr.assert.types.isbigint.md) | Asserts that the given value is a big integer. |
-|  [isBoolean(value)](./esdmr.assert.types.isboolean.md) | Asserts that the given value is a boolean. |
-|  [isFunction(value)](./esdmr.assert.types.isfunction.md) | Asserts that the given value is a function. |
-|  [isNumber(value)](./esdmr.assert.types.isnumber.md) | Asserts that the given value is a number. |
-|  [isObject(value)](./esdmr.assert.types.isobject.md) | Asserts that the given value is an object. The object may potentially be <code>null</code>. |
-|  [isString(value)](./esdmr.assert.types.isstring.md) | Asserts that the given value is a string. |
-|  [isSymbol(value)](./esdmr.assert.types.issymbol.md) | Asserts that the given value is a symbol. |
+|  [isBigInt(value, detail, args)](./esdmr.assert.types.isbigint.md) | Asserts that the given value is a big integer. |
+|  [isBoolean(value, detail, args)](./esdmr.assert.types.isboolean.md) | Asserts that the given value is a boolean. |
+|  [isFunction(value, detail, args)](./esdmr.assert.types.isfunction.md) | Asserts that the given value is a function. |
+|  [isInstanceOf(value, Constructor, detail, args)](./esdmr.assert.types.isinstanceof.md) | Asserts that the given value is an instance of a constructor. |
+|  [isNumber(value, detail, args)](./esdmr.assert.types.isnumber.md) | Asserts that the given value is a number. |
+|  [isObject(value, detail, args)](./esdmr.assert.types.isobject.md) | Asserts that the given value is an object. The object may potentially be <code>null</code>. |
+|  [isString(value, detail, args)](./esdmr.assert.types.isstring.md) | Asserts that the given value is a string. |
+|  [isSymbol(value, detail, args)](./esdmr.assert.types.issymbol.md) | Asserts that the given value is a symbol. |
 
 ## Type Aliases
 
@@ -25,4 +26,5 @@ parent: releases/1
 |  --- | --- |
 |  [FunctionLike](./esdmr.assert.types.functionlike.md) |  |
 |  [ObjectLike](./esdmr.assert.types.objectlike.md) |  |
+|  [TypedConstructor](./esdmr.assert.types.typedconstructor.md) |  |
 

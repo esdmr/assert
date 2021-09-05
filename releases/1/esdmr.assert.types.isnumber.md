@@ -12,7 +12,7 @@ Asserts that the given value is a number.
 <b>Signature:</b>
 
 ```typescript
-export declare function isNumber(value: unknown): asserts value is number;
+export declare function isNumber(value: unknown, detail?: string, ...args: unknown[]): asserts value is number;
 ```
 
 ## Parameters
@@ -20,6 +20,8 @@ export declare function isNumber(value: unknown): asserts value is number;
 |  Parameter | Type | Description |
 |  --- | --- | --- |
 |  value | unknown | Value to assert. |
+|  detail | string | Extra description. |
+|  args | unknown\[\] | Format arguments. |
 
 <b>Returns:</b>
 

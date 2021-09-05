@@ -12,7 +12,7 @@ Asserts that the given value is a symbol.
 <b>Signature:</b>
 
 ```typescript
-export declare function isSymbol(value: unknown): asserts value is symbol;
+export declare function isSymbol(value: unknown, detail?: string, ...args: unknown[]): asserts value is symbol;
 ```
 
 ## Parameters
@@ -20,6 +20,8 @@ export declare function isSymbol(value: unknown): asserts value is symbol;
 |  Parameter | Type | Description |
 |  --- | --- | --- |
 |  value | unknown | Value to assert. |
+|  detail | string | Extra description. |
+|  args | unknown\[\] | Format arguments. |
 
 <b>Returns:</b>
 

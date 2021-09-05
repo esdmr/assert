@@ -12,7 +12,7 @@ Asserts that the given value is a boolean.
 <b>Signature:</b>
 
 ```typescript
-export declare function isBoolean(value: unknown): asserts value is boolean;
+export declare function isBoolean(value: unknown, detail?: string, ...args: unknown[]): asserts value is boolean;
 ```
 
 ## Parameters
@@ -20,6 +20,8 @@ export declare function isBoolean(value: unknown): asserts value is boolean;
 |  Parameter | Type | Description |
 |  --- | --- | --- |
 |  value | unknown | Value to assert. |
+|  detail | string | Extra description. |
+|  args | unknown\[\] | Format arguments. |
 
 <b>Returns:</b>
 

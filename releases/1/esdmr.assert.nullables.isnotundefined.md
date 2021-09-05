@@ -12,7 +12,7 @@ Asserts that the given value is not `undefined`<!-- -->.
 <b>Signature:</b>
 
 ```typescript
-export declare function isNotUndefined<T>(value: T | undefined): asserts value is T;
+export declare function isNotUndefined<T>(value: T | undefined, detail?: string, ...args: unknown[]): asserts value is T;
 ```
 
 ## Parameters
@@ -20,6 +20,8 @@ export declare function isNotUndefined<T>(value: T | undefined): asserts value i
 |  Parameter | Type | Description |
 |  --- | --- | --- |
 |  value | T \| undefined | Value to assert. |
+|  detail | string | Extra description. |
+|  args | unknown\[\] | Format arguments. |
 
 <b>Returns:</b>
 

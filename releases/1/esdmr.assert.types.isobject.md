@@ -12,7 +12,7 @@ Asserts that the given value is an object. The object may potentially be `null`<
 <b>Signature:</b>
 
 ```typescript
-export declare function isObject(value: unknown): asserts value is ObjectLike | null;
+export declare function isObject(value: unknown, detail?: string, ...args: unknown[]): asserts value is ObjectLike | null;
 ```
 
 ## Parameters
@@ -20,6 +20,8 @@ export declare function isObject(value: unknown): asserts value is ObjectLike | 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
 |  value | unknown | Value to assert. |
+|  detail | string | Extra description. |
+|  args | unknown\[\] | Format arguments. |
 
 <b>Returns:</b>
 

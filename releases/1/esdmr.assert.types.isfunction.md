@@ -12,7 +12,7 @@ Asserts that the given value is a function.
 <b>Signature:</b>
 
 ```typescript
-export declare function isFunction(value: unknown): asserts value is FunctionLike;
+export declare function isFunction(value: unknown, detail?: string, ...args: unknown[]): asserts value is FunctionLike;
 ```
 
 ## Parameters
@@ -20,6 +20,8 @@ export declare function isFunction(value: unknown): asserts value is FunctionLik
 |  Parameter | Type | Description |
 |  --- | --- | --- |
 |  value | unknown | Value to assert. |
+|  detail | string | Extra description. |
+|  args | unknown\[\] | Format arguments. |
 
 <b>Returns:</b>
 

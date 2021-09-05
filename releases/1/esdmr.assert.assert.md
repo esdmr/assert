@@ -11,5 +11,8 @@ parent: releases/1
 
 |  Function | Description |
 |  --- | --- |
-|  [assert(condition, message, args)](./esdmr.assert.assert.assert.md) | Asserts that a given condition is true. It formats the message provided with the arguments after that which are stringified via <code>String</code>. |
+|  [assert(condition, message, args)](./esdmr.assert.assert.assert.md) | Asserts that a given condition is true. |
+|  [isEqual(value, expectedValue, detail, args)](./esdmr.assert.assert.isequal.md) | Asserts that the given value is strictly equal to the given expected value. |
+|  [isNotEqual(value, expectedValue, detail, args)](./esdmr.assert.assert.isnotequal.md) | Asserts that the given value is not strictly equal to the given (un)expected value. |
+|  [wrap(thrownValue, message, args)](./esdmr.assert.assert.wrap.md) | Wraps any thrown value. |
 

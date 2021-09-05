@@ -12,7 +12,7 @@ Asserts that the given value is a big integer.
 <b>Signature:</b>
 
 ```typescript
-export declare function isBigInt(value: unknown): asserts value is bigint;
+export declare function isBigInt(value: unknown, detail?: string, ...args: unknown[]): asserts value is bigint;
 ```
 
 ## Parameters
@@ -20,6 +20,8 @@ export declare function isBigInt(value: unknown): asserts value is bigint;
 |  Parameter | Type | Description |
 |  --- | --- | --- |
 |  value | unknown | Value to assert. |
+|  detail | string | Extra description. |
+|  args | unknown\[\] | Format arguments. |
 
 <b>Returns:</b>
 

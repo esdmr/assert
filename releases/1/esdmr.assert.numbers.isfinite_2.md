@@ -12,7 +12,7 @@ Asserts that the given value is finite (Not `±Infinity` or `NaN`<!-- -->).
 <b>Signature:</b>
 
 ```typescript
-export declare function isFinite(value: number): void;
+export declare function isFinite(value: number, detail?: string, ...args: unknown[]): void;
 ```
 
 ## Parameters
@@ -20,6 +20,8 @@ export declare function isFinite(value: number): void;
 |  Parameter | Type | Description |
 |  --- | --- | --- |
 |  value | number | Value to assert. |
+|  detail | string | Extra description. |
+|  args | unknown\[\] | Format arguments. |
 
 <b>Returns:</b>
 

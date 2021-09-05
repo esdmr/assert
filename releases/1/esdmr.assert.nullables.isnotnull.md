@@ -12,7 +12,7 @@ Asserts that the given value is not `null`<!-- -->.
 <b>Signature:</b>
 
 ```typescript
-export declare function isNotNull<T>(value: T | null): asserts value is T;
+export declare function isNotNull<T>(value: T | null, detail?: string, ...args: unknown[]): asserts value is T;
 ```
 
 ## Parameters
@@ -20,6 +20,8 @@ export declare function isNotNull<T>(value: T | null): asserts value is T;
 |  Parameter | Type | Description |
 |  --- | --- | --- |
 |  value | T \| null | Value to assert. |
+|  detail | string | Extra description. |
+|  args | unknown\[\] | Format arguments. |
 
 <b>Returns:</b>
 

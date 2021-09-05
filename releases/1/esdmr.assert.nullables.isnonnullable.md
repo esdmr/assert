@@ -12,7 +12,7 @@ Asserts that the given value is not `null` or `undefined`<!-- -->.
 <b>Signature:</b>
 
 ```typescript
-export declare function isNonNullable<T>(value: T | null | undefined): asserts value is T;
+export declare function isNonNullable<T>(value: T | null | undefined, detail?: string, ...args: unknown[]): asserts value is T;
 ```
 
 ## Parameters
@@ -20,6 +20,8 @@ export declare function isNonNullable<T>(value: T | null | undefined): asserts v
 |  Parameter | Type | Description |
 |  --- | --- | --- |
 |  value | T \| null \| undefined | Value to assert. |
+|  detail | string | Extra description. |
+|  args | unknown\[\] | Format arguments. |
 
 <b>Returns:</b>
 

@@ -11,7 +11,7 @@ parent: releases/1
 
 |  Function | Description |
 |  --- | --- |
-|  [isNonNullable(value)](./esdmr.assert.nullables.isnonnullable.md) | Asserts that the given value is not <code>null</code> or <code>undefined</code>. |
-|  [isNotNull(value)](./esdmr.assert.nullables.isnotnull.md) | Asserts that the given value is not <code>null</code>. |
-|  [isNotUndefined(value)](./esdmr.assert.nullables.isnotundefined.md) | Asserts that the given value is not <code>undefined</code>. |
+|  [isNonNullable(value, detail, args)](./esdmr.assert.nullables.isnonnullable.md) | Asserts that the given value is not <code>null</code> or <code>undefined</code>. |
+|  [isNotNull(value, detail, args)](./esdmr.assert.nullables.isnotnull.md) | Asserts that the given value is not <code>null</code>. |
+|  [isNotUndefined(value, detail, args)](./esdmr.assert.nullables.isnotundefined.md) | Asserts that the given value is not <code>undefined</code>. |
 
