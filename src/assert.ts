@@ -36,6 +36,14 @@ export function wrap (
 	return new WrappedError(format(message, ...args), thrownValue);
 }
 
+/**
+ * Asserts that the given value is strictly equal to the given expected value.
+ *
+ * @param value - Value to assert.
+ * @param expectedValue
+ * @param detail - Extra description.
+ * @param args - Format arguments.
+ */
 export function isEqual<T> (
 	value: T,
 	expectedValue: T,
@@ -51,6 +59,14 @@ export function isEqual<T> (
 	}
 }
 
+/**
+ * Asserts that the given value is not strictly equal to the given (un)expected value.
+ *
+ * @param value - Value to assert.
+ * @param expectedValue
+ * @param detail - Extra description.
+ * @param args - Format arguments.
+ */
 export function isNotEqual<T> (
 	value: T,
 	expectedValue: T,
