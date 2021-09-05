@@ -53,7 +53,7 @@ export function isEqual<T> (
 	if (value !== expectedValue) {
 		throw new AssertionError(format(
 			addDetail(messages.NOT_EQUAL, detail),
-			String(expectedValue),
+			expectedValue,
 			...args,
 		));
 	}
@@ -76,7 +76,7 @@ export function isNotEqual<T> (
 	if (value === expectedValue) {
 		throw new AssertionError(format(
 			addDetail(messages.IS_EQUAL, detail),
-			String(expectedValue),
+			expectedValue,
 			...args,
 		));
 	}
