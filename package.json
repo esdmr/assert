@@ -1,6 +1,6 @@
 {
   "name": "@esdmr/assert",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Assertion library for JavaScript",
   "homepage": "https://github.com/esdmr/assert#readme",
   "bugs": "https://github.com/esdmr/assert/issues",
