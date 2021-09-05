@@ -1,6 +1,6 @@
 import { AssertionError, WrappedError } from './errors.js';
-import { DEFAULT_MESSAGE } from './messages.js';
-import { format } from './utils.js';
+import * as messages from './messages.js';
+import { addDetail, format } from './utils.js';
 
 /**
  * Asserts that a given condition is true.
@@ -12,7 +12,7 @@ import { format } from './utils.js';
  */
 export function assert (
 	condition: boolean,
-	message = DEFAULT_MESSAGE,
+	message = messages.DEFAULT_MESSAGE,
 	...args: unknown[]
 ): asserts condition {
 	if (!condition) {
@@ -30,8 +30,54 @@ export function assert (
  */
 export function wrap (
 	thrownValue: unknown,
-	message = DEFAULT_MESSAGE,
+	message = messages.DEFAULT_MESSAGE,
 	...args: unknown[]
 ) {
 	return new WrappedError(format(message, ...args), thrownValue);
+}
+
+/**
+ * Asserts that the given value is strictly equal to the given expected value.
+ *
+ * @param value - Value to assert.
+ * @param expectedValue
+ * @param detail - Extra description.
+ * @param args - Format arguments.
+ */
+export function isEqual<T> (
+	value: T,
+	expectedValue: T,
+	detail?: string,
+	...args: unknown[]
+) {
+	if (value !== expectedValue) {
+		throw new AssertionError(format(
+			addDetail(messages.NOT_EQUAL, detail),
+			expectedValue,
+			...args,
+		));
+	}
+}
+
+/**
+ * Asserts that the given value is not strictly equal to the given (un)expected value.
+ *
+ * @param value - Value to assert.
+ * @param expectedValue
+ * @param detail - Extra description.
+ * @param args - Format arguments.
+ */
+export function isNotEqual<T> (
+	value: T,
+	expectedValue: T,
+	detail?: string,
+	...args: unknown[]
+) {
+	if (value === expectedValue) {
+		throw new AssertionError(format(
+			addDetail(messages.IS_EQUAL, detail),
+			expectedValue,
+			...args,
+		));
+	}
 }

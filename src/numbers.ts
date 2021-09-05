@@ -86,3 +86,97 @@ export function isSafeInteger (value: number, detail?: string, ...args: unknown[
 		));
 	}
 }
+
+/**
+ * Asserts that the given value is greater than the given minimum value.
+ *
+ * @param value - Value to assert.
+ * @param minimum
+ * @param detail - Extra description.
+ * @param args - Format arguments.
+ */
+export function isGreater (
+	value: number,
+	minimum: number,
+	detail?: string,
+	...args: unknown[]
+) {
+	if (value <= minimum) {
+		throw new RangeError(format(
+			addDetail(messages.NOT_GREATER, detail),
+			minimum,
+			...args,
+		));
+	}
+}
+
+/**
+ * Asserts that the given value is greater than or equal to the given minimum
+ * value.
+ *
+ * @param value - Value to assert.
+ * @param minimum
+ * @param detail - Extra description.
+ * @param args - Format arguments.
+ */
+export function isGreaterOrEqual (
+	value: number,
+	minimum: number,
+	detail?: string,
+	...args: unknown[]
+) {
+	if (value < minimum) {
+		throw new RangeError(format(
+			addDetail(messages.NOT_GREATER_OR_EQUAL, detail),
+			minimum,
+			...args,
+		));
+	}
+}
+
+/**
+ * Asserts that the given value is less than the given maximum value.
+ *
+ * @param value - Value to assert.
+ * @param maximum
+ * @param detail - Extra description.
+ * @param args - Format arguments.
+ */
+export function isLess (
+	value: number,
+	maximum: number,
+	detail?: string,
+	...args: unknown[]
+) {
+	if (value >= maximum) {
+		throw new RangeError(format(
+			addDetail(messages.NOT_LESS, detail),
+			maximum,
+			...args,
+		));
+	}
+}
+
+/**
+ * Asserts that the given value is less than or equal to the given maximum
+ * value.
+ *
+ * @param value - Value to assert.
+ * @param maximum
+ * @param detail - Extra description.
+ * @param args - Format arguments.
+ */
+export function isLessOrEqual (
+	value: number,
+	maximum: number,
+	detail?: string,
+	...args: unknown[]
+) {
+	if (value > maximum) {
+		throw new RangeError(format(
+			addDetail(messages.NOT_LESS_OR_EQUAL, detail),
+			maximum,
+			...args,
+		));
+	}
+}
