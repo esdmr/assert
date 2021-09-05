@@ -1,5 +1,5 @@
 import { test } from 'tap';
-import { testDetail, testFormat } from './test-util/format.js';
+import { testDetail, testFormat } from '#test/test-util/format.js';
 import * as assert from '#src/assert.js';
 import { AssertionError, WrappedError } from '#src/errors.js';
 import * as messages from '#src/messages.js';

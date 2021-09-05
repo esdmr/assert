@@ -1,5 +1,5 @@
 import { test } from 'tap';
-import { testDetail } from './test-util/format.js';
+import { testDetail } from '#test/test-util/format.js';
 import * as types from '#src/types.js';
 import * as messages from '#src/messages.js';
 import { format } from '#src/utils.js';
