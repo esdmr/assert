@@ -1,0 +1,578 @@
+{"0": {
+    "doc": "assert() function",
+    "title": "assert() function",
+    "content": "Home &gt; @esdmr/assert/assert &gt; assert . Asserts that a given condition is true. Signature: . export declare function assert(condition: boolean, message?: string, ...args: unknown[]): asserts condition; . ",
+    "url": "https://esdmr.github.io/assert/releases/1/esdmr.assert.assert.assert.html",
+    "relUrl": "/releases/1/esdmr.assert.assert.assert.html"
+  },"1": {
+    "doc": "assert() function",
+    "title": "Parameters",
+    "content": "| Parameter | Type | Description | . | condition | boolean | The given condition. | . | message | string | The message to include in the error. Formatted with {}. | . | args | unknown[] | Format arguments. | . Returns: . asserts condition . ",
+    "url": "https://esdmr.github.io/assert/releases/1/esdmr.assert.assert.assert.html#parameters",
+    "relUrl": "/releases/1/esdmr.assert.assert.assert.html#parameters"
+  },"2": {
+    "doc": "isEqual() function",
+    "title": "isEqual() function",
+    "content": "Home &gt; @esdmr/assert/assert &gt; isEqual . Asserts that the given value is strictly equal to the given expected value. Signature: . export declare function isEqual&lt;T&gt;(value: T, expectedValue: T, detail?: string, ...args: unknown[]): void; . ",
+    "url": "https://esdmr.github.io/assert/releases/1/esdmr.assert.assert.isequal.html",
+    "relUrl": "/releases/1/esdmr.assert.assert.isequal.html"
+  },"3": {
+    "doc": "isEqual() function",
+    "title": "Parameters",
+    "content": "| Parameter | Type | Description | . | value | T | Value to assert. | . | expectedValue | T |   | . | detail | string | Extra description. | . | args | unknown[] | Format arguments. | . Returns: . void . ",
+    "url": "https://esdmr.github.io/assert/releases/1/esdmr.assert.assert.isequal.html#parameters",
+    "relUrl": "/releases/1/esdmr.assert.assert.isequal.html#parameters"
+  },"4": {
+    "doc": "isNotEqual() function",
+    "title": "isNotEqual() function",
+    "content": "Home &gt; @esdmr/assert/assert &gt; isNotEqual . Asserts that the given value is not strictly equal to the given (un)expected value. Signature: . export declare function isNotEqual&lt;T&gt;(value: T, expectedValue: T, detail?: string, ...args: unknown[]): void; . ",
+    "url": "https://esdmr.github.io/assert/releases/1/esdmr.assert.assert.isnotequal.html",
+    "relUrl": "/releases/1/esdmr.assert.assert.isnotequal.html"
+  },"5": {
+    "doc": "isNotEqual() function",
+    "title": "Parameters",
+    "content": "| Parameter | Type | Description | . | value | T | Value to assert. | . | expectedValue | T |   | . | detail | string | Extra description. | . | args | unknown[] | Format arguments. | . Returns: . void . ",
+    "url": "https://esdmr.github.io/assert/releases/1/esdmr.assert.assert.isnotequal.html#parameters",
+    "relUrl": "/releases/1/esdmr.assert.assert.isnotequal.html#parameters"
+  },"6": {
+    "doc": "@esdmr/assert/assert package",
+    "title": "@esdmr/assert/assert package",
+    "content": "Home &gt; @esdmr/assert/assert . ",
+    "url": "https://esdmr.github.io/assert/releases/1/esdmr.assert.assert.html",
+    "relUrl": "/releases/1/esdmr.assert.assert.html"
+  },"7": {
+    "doc": "@esdmr/assert/assert package",
+    "title": "Functions",
+    "content": "| Function | Description | . | assert(condition, message, args) | Asserts that a given condition is true. | . | isEqual(value, expectedValue, detail, args) | Asserts that the given value is strictly equal to the given expected value. | . | isNotEqual(value, expectedValue, detail, args) | Asserts that the given value is not strictly equal to the given (un)expected value. | . | wrap(thrownValue, message, args) | Wraps any thrown value. | . ",
+    "url": "https://esdmr.github.io/assert/releases/1/esdmr.assert.assert.html#functions",
+    "relUrl": "/releases/1/esdmr.assert.assert.html#functions"
+  },"8": {
+    "doc": "wrap() function",
+    "title": "wrap() function",
+    "content": "Home &gt; @esdmr/assert/assert &gt; wrap . Wraps any thrown value. Signature: . export declare function wrap(thrownValue: unknown, message?: string, ...args: unknown[]): WrappedError; . ",
+    "url": "https://esdmr.github.io/assert/releases/1/esdmr.assert.assert.wrap.html",
+    "relUrl": "/releases/1/esdmr.assert.assert.wrap.html"
+  },"9": {
+    "doc": "wrap() function",
+    "title": "Parameters",
+    "content": "| Parameter | Type | Description | . | thrownValue | unknown | The value to wrap. | . | message | string | The message to include in the error. Formatted with {}. | . | args | unknown[] | Format arguments. | . Returns: . WrappedError . ",
+    "url": "https://esdmr.github.io/assert/releases/1/esdmr.assert.assert.wrap.html#parameters",
+    "relUrl": "/releases/1/esdmr.assert.assert.wrap.html#parameters"
+  },"10": {
+    "doc": "AssertionError.(constructor)",
+    "title": "AssertionError.(constructor)",
+    "content": "Home &gt; @esdmr/assert/errors &gt; AssertionError &gt; (constructor) . Constructs a new instance of the AssertionError class . Signature: . constructor(message: string); . ",
+    "url": "https://esdmr.github.io/assert/releases/1/esdmr.assert.errors.assertionerror._constructor_.html",
+    "relUrl": "/releases/1/esdmr.assert.errors.assertionerror._constructor_.html"
+  },"11": {
+    "doc": "AssertionError.(constructor)",
+    "title": "Parameters",
+    "content": "| Parameter | Type | Description | . | message | string |   | . ",
+    "url": "https://esdmr.github.io/assert/releases/1/esdmr.assert.errors.assertionerror._constructor_.html#parameters",
+    "relUrl": "/releases/1/esdmr.assert.errors.assertionerror._constructor_.html#parameters"
+  },"12": {
+    "doc": "AssertionError class",
+    "title": "AssertionError class",
+    "content": "Home &gt; @esdmr/assert/errors &gt; AssertionError . The error which is thrown by the assert function. Signature: . export declare class AssertionError extends Error . Extends: Error . ",
+    "url": "https://esdmr.github.io/assert/releases/1/esdmr.assert.errors.assertionerror.html",
+    "relUrl": "/releases/1/esdmr.assert.errors.assertionerror.html"
+  },"13": {
+    "doc": "AssertionError class",
+    "title": "Constructors",
+    "content": "| Constructor | Modifiers | Description | . | (constructor)(message) |   | Constructs a new instance of the AssertionError class | . ",
+    "url": "https://esdmr.github.io/assert/releases/1/esdmr.assert.errors.assertionerror.html#constructors",
+    "relUrl": "/releases/1/esdmr.assert.errors.assertionerror.html#constructors"
+  },"14": {
+    "doc": "AssertionError class",
+    "title": "Properties",
+    "content": "| Property | Modifiers | Type | Description | . | name |   | string |   | . ",
+    "url": "https://esdmr.github.io/assert/releases/1/esdmr.assert.errors.assertionerror.html#properties",
+    "relUrl": "/releases/1/esdmr.assert.errors.assertionerror.html#properties"
+  },"15": {
+    "doc": "AssertionError.name property",
+    "title": "AssertionError.name property",
+    "content": "Home &gt; @esdmr/assert/errors &gt; AssertionError &gt; name . Signature: . name: string; . ",
+    "url": "https://esdmr.github.io/assert/releases/1/esdmr.assert.errors.assertionerror.name.html",
+    "relUrl": "/releases/1/esdmr.assert.errors.assertionerror.name.html"
+  },"16": {
+    "doc": "@esdmr/assert/errors package",
+    "title": "@esdmr/assert/errors package",
+    "content": "Home &gt; @esdmr/assert/errors . ",
+    "url": "https://esdmr.github.io/assert/releases/1/esdmr.assert.errors.html",
+    "relUrl": "/releases/1/esdmr.assert.errors.html"
+  },"17": {
+    "doc": "@esdmr/assert/errors package",
+    "title": "Classes",
+    "content": "| Class | Description | . | AssertionError | The error which is thrown by the assert function. | . | PrimitiveError | Wrapper for any thrown value which is not an instance of Error. It converts those values to string via String. | . | WrappedError | Wrapper for any thrown value. It provides extra context to errors and assertions. Internally it uses PrimitiveError to wrap the original thrown value. | . ",
+    "url": "https://esdmr.github.io/assert/releases/1/esdmr.assert.errors.html#classes",
+    "relUrl": "/releases/1/esdmr.assert.errors.html#classes"
+  },"18": {
+    "doc": "PrimitiveError.(constructor)",
+    "title": "PrimitiveError.(constructor)",
+    "content": "Home &gt; @esdmr/assert/errors &gt; PrimitiveError &gt; (constructor) . Constructs a new instance of the PrimitiveError class . Signature: . constructor(value: unknown); . ",
+    "url": "https://esdmr.github.io/assert/releases/1/esdmr.assert.errors.primitiveerror._constructor_.html",
+    "relUrl": "/releases/1/esdmr.assert.errors.primitiveerror._constructor_.html"
+  },"19": {
+    "doc": "PrimitiveError.(constructor)",
+    "title": "Parameters",
+    "content": "| Parameter | Type | Description | . | value | unknown |   | . ",
+    "url": "https://esdmr.github.io/assert/releases/1/esdmr.assert.errors.primitiveerror._constructor_.html#parameters",
+    "relUrl": "/releases/1/esdmr.assert.errors.primitiveerror._constructor_.html#parameters"
+  },"20": {
+    "doc": "PrimitiveError.getError() method",
+    "title": "PrimitiveError.getError() method",
+    "content": "Home &gt; @esdmr/assert/errors &gt; PrimitiveError &gt; getError . Convert any value to an Error object if it is not already. Signature: . static getError&lt;T extends Error&gt;(error: T): T; . ",
+    "url": "https://esdmr.github.io/assert/releases/1/esdmr.assert.errors.primitiveerror.geterror.html",
+    "relUrl": "/releases/1/esdmr.assert.errors.primitiveerror.geterror.html"
+  },"21": {
+    "doc": "PrimitiveError.getError() method",
+    "title": "Parameters",
+    "content": "| Parameter | Type | Description | . | error | T |   | . Returns: . T . Either the thrown value or a new instance of PrimitiveError. ",
+    "url": "https://esdmr.github.io/assert/releases/1/esdmr.assert.errors.primitiveerror.geterror.html#parameters",
+    "relUrl": "/releases/1/esdmr.assert.errors.primitiveerror.geterror.html#parameters"
+  },"22": {
+    "doc": "PrimitiveError.getError() method",
+    "title": "PrimitiveError.getError() method",
+    "content": "Home &gt; @esdmr/assert/errors &gt; PrimitiveError &gt; getError . Convert any value to an Error object if it is not already. Signature: . static getError(value: unknown): Error; . ",
+    "url": "https://esdmr.github.io/assert/releases/1/esdmr.assert.errors.primitiveerror.geterror_1.html",
+    "relUrl": "/releases/1/esdmr.assert.errors.primitiveerror.geterror_1.html"
+  },"23": {
+    "doc": "PrimitiveError.getError() method",
+    "title": "Parameters",
+    "content": "| Parameter | Type | Description | . | value | unknown | The thrown value. | . Returns: . Error . Either the thrown value or a new instance of PrimitiveError. ",
+    "url": "https://esdmr.github.io/assert/releases/1/esdmr.assert.errors.primitiveerror.geterror_1.html#parameters",
+    "relUrl": "/releases/1/esdmr.assert.errors.primitiveerror.geterror_1.html#parameters"
+  },"24": {
+    "doc": "PrimitiveError class",
+    "title": "PrimitiveError class",
+    "content": "Home &gt; @esdmr/assert/errors &gt; PrimitiveError . Wrapper for any thrown value which is not an instance of Error. It converts those values to string via String. Signature: . export declare class PrimitiveError extends Error . Extends: Error . ",
+    "url": "https://esdmr.github.io/assert/releases/1/esdmr.assert.errors.primitiveerror.html",
+    "relUrl": "/releases/1/esdmr.assert.errors.primitiveerror.html"
+  },"25": {
+    "doc": "PrimitiveError class",
+    "title": "Constructors",
+    "content": "| Constructor | Modifiers | Description | . | (constructor)(value) |   | Constructs a new instance of the PrimitiveError class | . ",
+    "url": "https://esdmr.github.io/assert/releases/1/esdmr.assert.errors.primitiveerror.html#constructors",
+    "relUrl": "/releases/1/esdmr.assert.errors.primitiveerror.html#constructors"
+  },"26": {
+    "doc": "PrimitiveError class",
+    "title": "Properties",
+    "content": "| Property | Modifiers | Type | Description | . | name |   | string |   | . | stack |   | string |   | . | value |   | unknown |   | . ",
+    "url": "https://esdmr.github.io/assert/releases/1/esdmr.assert.errors.primitiveerror.html#properties",
+    "relUrl": "/releases/1/esdmr.assert.errors.primitiveerror.html#properties"
+  },"27": {
+    "doc": "PrimitiveError class",
+    "title": "Methods",
+    "content": "| Method | Modifiers | Description | . | getError(error) | static | Convert any value to an Error object if it is not already. | . | getError(value) | static | Convert any value to an Error object if it is not already. | . ",
+    "url": "https://esdmr.github.io/assert/releases/1/esdmr.assert.errors.primitiveerror.html#methods",
+    "relUrl": "/releases/1/esdmr.assert.errors.primitiveerror.html#methods"
+  },"28": {
+    "doc": "PrimitiveError.name property",
+    "title": "PrimitiveError.name property",
+    "content": "Home &gt; @esdmr/assert/errors &gt; PrimitiveError &gt; name . Signature: . name: string; . ",
+    "url": "https://esdmr.github.io/assert/releases/1/esdmr.assert.errors.primitiveerror.name.html",
+    "relUrl": "/releases/1/esdmr.assert.errors.primitiveerror.name.html"
+  },"29": {
+    "doc": "PrimitiveError.stack property",
+    "title": "PrimitiveError.stack property",
+    "content": "Home &gt; @esdmr/assert/errors &gt; PrimitiveError &gt; stack . Signature: . stack: string; . ",
+    "url": "https://esdmr.github.io/assert/releases/1/esdmr.assert.errors.primitiveerror.stack.html",
+    "relUrl": "/releases/1/esdmr.assert.errors.primitiveerror.stack.html"
+  },"30": {
+    "doc": "PrimitiveError.value property",
+    "title": "PrimitiveError.value property",
+    "content": "Home &gt; @esdmr/assert/errors &gt; PrimitiveError &gt; value . Signature: . readonly value: unknown; . ",
+    "url": "https://esdmr.github.io/assert/releases/1/esdmr.assert.errors.primitiveerror.value.html",
+    "relUrl": "/releases/1/esdmr.assert.errors.primitiveerror.value.html"
+  },"31": {
+    "doc": "WrappedError.(constructor)",
+    "title": "WrappedError.(constructor)",
+    "content": "Home &gt; @esdmr/assert/errors &gt; WrappedError &gt; (constructor) . Constructs a new instance of the WrappedError class . Signature: . constructor(message: string, thrownValue: unknown); . ",
+    "url": "https://esdmr.github.io/assert/releases/1/esdmr.assert.errors.wrappederror._constructor_.html",
+    "relUrl": "/releases/1/esdmr.assert.errors.wrappederror._constructor_.html"
+  },"32": {
+    "doc": "WrappedError.(constructor)",
+    "title": "Parameters",
+    "content": "| Parameter | Type | Description | . | message | string |   | . | thrownValue | unknown |   | . ",
+    "url": "https://esdmr.github.io/assert/releases/1/esdmr.assert.errors.wrappederror._constructor_.html#parameters",
+    "relUrl": "/releases/1/esdmr.assert.errors.wrappederror._constructor_.html#parameters"
+  },"33": {
+    "doc": "WrappedError class",
+    "title": "WrappedError class",
+    "content": "Home &gt; @esdmr/assert/errors &gt; WrappedError . Wrapper for any thrown value. It provides extra context to errors and assertions. Internally it uses PrimitiveError to wrap the original thrown value. Signature: . export declare class WrappedError extends Error . Extends: Error . ",
+    "url": "https://esdmr.github.io/assert/releases/1/esdmr.assert.errors.wrappederror.html",
+    "relUrl": "/releases/1/esdmr.assert.errors.wrappederror.html"
+  },"34": {
+    "doc": "WrappedError class",
+    "title": "Constructors",
+    "content": "| Constructor | Modifiers | Description | . | (constructor)(message, thrownValue) |   | Constructs a new instance of the WrappedError class | . ",
+    "url": "https://esdmr.github.io/assert/releases/1/esdmr.assert.errors.wrappederror.html#constructors",
+    "relUrl": "/releases/1/esdmr.assert.errors.wrappederror.html#constructors"
+  },"35": {
+    "doc": "WrappedError class",
+    "title": "Properties",
+    "content": "| Property | Modifiers | Type | Description | . | name |   | string |   | . | thrownValue |   | unknown |   | . ",
+    "url": "https://esdmr.github.io/assert/releases/1/esdmr.assert.errors.wrappederror.html#properties",
+    "relUrl": "/releases/1/esdmr.assert.errors.wrappederror.html#properties"
+  },"36": {
+    "doc": "WrappedError.name property",
+    "title": "WrappedError.name property",
+    "content": "Home &gt; @esdmr/assert/errors &gt; WrappedError &gt; name . Signature: . name: string; . ",
+    "url": "https://esdmr.github.io/assert/releases/1/esdmr.assert.errors.wrappederror.name.html",
+    "relUrl": "/releases/1/esdmr.assert.errors.wrappederror.name.html"
+  },"37": {
+    "doc": "WrappedError.thrownValue property",
+    "title": "WrappedError.thrownValue property",
+    "content": "Home &gt; @esdmr/assert/errors &gt; WrappedError &gt; thrownValue . Signature: . readonly thrownValue: unknown; . ",
+    "url": "https://esdmr.github.io/assert/releases/1/esdmr.assert.errors.wrappederror.thrownvalue.html",
+    "relUrl": "/releases/1/esdmr.assert.errors.wrappederror.thrownvalue.html"
+  },"38": {
+    "doc": "isNonNullable() function",
+    "title": "isNonNullable() function",
+    "content": "Home &gt; @esdmr/assert/nullables &gt; isNonNullable . Asserts that the given value is not null or undefined. Signature: . export declare function isNonNullable&lt;T&gt;(value: T | null | undefined, detail?: string, ...args: unknown[]): asserts value is T; . ",
+    "url": "https://esdmr.github.io/assert/releases/1/esdmr.assert.nullables.isnonnullable.html",
+    "relUrl": "/releases/1/esdmr.assert.nullables.isnonnullable.html"
+  },"39": {
+    "doc": "isNonNullable() function",
+    "title": "Parameters",
+    "content": "| Parameter | Type | Description | . | value | T | null | undefined | Value to assert. | . | detail | string | Extra description. | . | args | unknown[] | Format arguments. | . Returns: . asserts value is T . ",
+    "url": "https://esdmr.github.io/assert/releases/1/esdmr.assert.nullables.isnonnullable.html#parameters",
+    "relUrl": "/releases/1/esdmr.assert.nullables.isnonnullable.html#parameters"
+  },"40": {
+    "doc": "isNotNull() function",
+    "title": "isNotNull() function",
+    "content": "Home &gt; @esdmr/assert/nullables &gt; isNotNull . Asserts that the given value is not null. Signature: . export declare function isNotNull&lt;T&gt;(value: T | null, detail?: string, ...args: unknown[]): asserts value is T; . ",
+    "url": "https://esdmr.github.io/assert/releases/1/esdmr.assert.nullables.isnotnull.html",
+    "relUrl": "/releases/1/esdmr.assert.nullables.isnotnull.html"
+  },"41": {
+    "doc": "isNotNull() function",
+    "title": "Parameters",
+    "content": "| Parameter | Type | Description | . | value | T | null | Value to assert. | . | detail | string | Extra description. | . | args | unknown[] | Format arguments. | . Returns: . asserts value is T . ",
+    "url": "https://esdmr.github.io/assert/releases/1/esdmr.assert.nullables.isnotnull.html#parameters",
+    "relUrl": "/releases/1/esdmr.assert.nullables.isnotnull.html#parameters"
+  },"42": {
+    "doc": "isNotUndefined() function",
+    "title": "isNotUndefined() function",
+    "content": "Home &gt; @esdmr/assert/nullables &gt; isNotUndefined . Asserts that the given value is not undefined. Signature: . export declare function isNotUndefined&lt;T&gt;(value: T | undefined, detail?: string, ...args: unknown[]): asserts value is T; . ",
+    "url": "https://esdmr.github.io/assert/releases/1/esdmr.assert.nullables.isnotundefined.html",
+    "relUrl": "/releases/1/esdmr.assert.nullables.isnotundefined.html"
+  },"43": {
+    "doc": "isNotUndefined() function",
+    "title": "Parameters",
+    "content": "| Parameter | Type | Description | . | value | T | undefined | Value to assert. | . | detail | string | Extra description. | . | args | unknown[] | Format arguments. | . Returns: . asserts value is T . ",
+    "url": "https://esdmr.github.io/assert/releases/1/esdmr.assert.nullables.isnotundefined.html#parameters",
+    "relUrl": "/releases/1/esdmr.assert.nullables.isnotundefined.html#parameters"
+  },"44": {
+    "doc": "@esdmr/assert/nullables package",
+    "title": "@esdmr/assert/nullables package",
+    "content": "Home &gt; @esdmr/assert/nullables . ",
+    "url": "https://esdmr.github.io/assert/releases/1/esdmr.assert.nullables.html",
+    "relUrl": "/releases/1/esdmr.assert.nullables.html"
+  },"45": {
+    "doc": "@esdmr/assert/nullables package",
+    "title": "Functions",
+    "content": "| Function | Description | . | isNonNullable(value, detail, args) | Asserts that the given value is not null or undefined. | . | isNotNull(value, detail, args) | Asserts that the given value is not null. | . | isNotUndefined(value, detail, args) | Asserts that the given value is not undefined. | . ",
+    "url": "https://esdmr.github.io/assert/releases/1/esdmr.assert.nullables.html#functions",
+    "relUrl": "/releases/1/esdmr.assert.nullables.html#functions"
+  },"46": {
+    "doc": "isAnyInteger() function",
+    "title": "isAnyInteger() function",
+    "content": "Home &gt; @esdmr/assert/numbers &gt; isAnyInteger . Asserts that the given value is an integer. The integer may potentially be not safe. Signature: . export declare function isAnyInteger(value: number, detail?: string, ...args: unknown[]): void; . ",
+    "url": "https://esdmr.github.io/assert/releases/1/esdmr.assert.numbers.isanyinteger.html",
+    "relUrl": "/releases/1/esdmr.assert.numbers.isanyinteger.html"
+  },"47": {
+    "doc": "isAnyInteger() function",
+    "title": "Parameters",
+    "content": "| Parameter | Type | Description | . | value | number | Value to assert. | . | detail | string | Extra description. | . | args | unknown[] | Format arguments. | . Returns: . void . ",
+    "url": "https://esdmr.github.io/assert/releases/1/esdmr.assert.numbers.isanyinteger.html#parameters",
+    "relUrl": "/releases/1/esdmr.assert.numbers.isanyinteger.html#parameters"
+  },"48": {
+    "doc": "isFinite_2() function",
+    "title": "isFinite_2() function",
+    "content": "Home &gt; @esdmr/assert/numbers &gt; isFinite_2 . Asserts that the given value is finite (Not ±Infinity or NaN). Signature: . export declare function isFinite(value: number, detail?: string, ...args: unknown[]): void; . ",
+    "url": "https://esdmr.github.io/assert/releases/1/esdmr.assert.numbers.isfinite_2.html",
+    "relUrl": "/releases/1/esdmr.assert.numbers.isfinite_2.html"
+  },"49": {
+    "doc": "isFinite_2() function",
+    "title": "Parameters",
+    "content": "| Parameter | Type | Description | . | value | number | Value to assert. | . | detail | string | Extra description. | . | args | unknown[] | Format arguments. | . Returns: . void . ",
+    "url": "https://esdmr.github.io/assert/releases/1/esdmr.assert.numbers.isfinite_2.html#parameters",
+    "relUrl": "/releases/1/esdmr.assert.numbers.isfinite_2.html#parameters"
+  },"50": {
+    "doc": "isGreater() function",
+    "title": "isGreater() function",
+    "content": "Home &gt; @esdmr/assert/numbers &gt; isGreater . Asserts that the given value is greater than the given minimum value. Signature: . export declare function isGreater(value: number, minimum: number, detail?: string, ...args: unknown[]): void; . ",
+    "url": "https://esdmr.github.io/assert/releases/1/esdmr.assert.numbers.isgreater.html",
+    "relUrl": "/releases/1/esdmr.assert.numbers.isgreater.html"
+  },"51": {
+    "doc": "isGreater() function",
+    "title": "Parameters",
+    "content": "| Parameter | Type | Description | . | value | number | Value to assert. | . | minimum | number |   | . | detail | string | Extra description. | . | args | unknown[] | Format arguments. | . Returns: . void . ",
+    "url": "https://esdmr.github.io/assert/releases/1/esdmr.assert.numbers.isgreater.html#parameters",
+    "relUrl": "/releases/1/esdmr.assert.numbers.isgreater.html#parameters"
+  },"52": {
+    "doc": "isGreaterOrEqual() function",
+    "title": "isGreaterOrEqual() function",
+    "content": "Home &gt; @esdmr/assert/numbers &gt; isGreaterOrEqual . Asserts that the given value is greater than or equal to the given minimum value. Signature: . export declare function isGreaterOrEqual(value: number, minimum: number, detail?: string, ...args: unknown[]): void; . ",
+    "url": "https://esdmr.github.io/assert/releases/1/esdmr.assert.numbers.isgreaterorequal.html",
+    "relUrl": "/releases/1/esdmr.assert.numbers.isgreaterorequal.html"
+  },"53": {
+    "doc": "isGreaterOrEqual() function",
+    "title": "Parameters",
+    "content": "| Parameter | Type | Description | . | value | number | Value to assert. | . | minimum | number |   | . | detail | string | Extra description. | . | args | unknown[] | Format arguments. | . Returns: . void . ",
+    "url": "https://esdmr.github.io/assert/releases/1/esdmr.assert.numbers.isgreaterorequal.html#parameters",
+    "relUrl": "/releases/1/esdmr.assert.numbers.isgreaterorequal.html#parameters"
+  },"54": {
+    "doc": "isLess() function",
+    "title": "isLess() function",
+    "content": "Home &gt; @esdmr/assert/numbers &gt; isLess . Asserts that the given value is less than the given maximum value. Signature: . export declare function isLess(value: number, maximum: number, detail?: string, ...args: unknown[]): void; . ",
+    "url": "https://esdmr.github.io/assert/releases/1/esdmr.assert.numbers.isless.html",
+    "relUrl": "/releases/1/esdmr.assert.numbers.isless.html"
+  },"55": {
+    "doc": "isLess() function",
+    "title": "Parameters",
+    "content": "| Parameter | Type | Description | . | value | number | Value to assert. | . | maximum | number |   | . | detail | string | Extra description. | . | args | unknown[] | Format arguments. | . Returns: . void . ",
+    "url": "https://esdmr.github.io/assert/releases/1/esdmr.assert.numbers.isless.html#parameters",
+    "relUrl": "/releases/1/esdmr.assert.numbers.isless.html#parameters"
+  },"56": {
+    "doc": "isLessOrEqual() function",
+    "title": "isLessOrEqual() function",
+    "content": "Home &gt; @esdmr/assert/numbers &gt; isLessOrEqual . Asserts that the given value is less than or equal to the given maximum value. Signature: . export declare function isLessOrEqual(value: number, maximum: number, detail?: string, ...args: unknown[]): void; . ",
+    "url": "https://esdmr.github.io/assert/releases/1/esdmr.assert.numbers.islessorequal.html",
+    "relUrl": "/releases/1/esdmr.assert.numbers.islessorequal.html"
+  },"57": {
+    "doc": "isLessOrEqual() function",
+    "title": "Parameters",
+    "content": "| Parameter | Type | Description | . | value | number | Value to assert. | . | maximum | number |   | . | detail | string | Extra description. | . | args | unknown[] | Format arguments. | . Returns: . void . ",
+    "url": "https://esdmr.github.io/assert/releases/1/esdmr.assert.numbers.islessorequal.html#parameters",
+    "relUrl": "/releases/1/esdmr.assert.numbers.islessorequal.html#parameters"
+  },"58": {
+    "doc": "isNotNaN() function",
+    "title": "isNotNaN() function",
+    "content": "Home &gt; @esdmr/assert/numbers &gt; isNotNaN . Asserts that the given value is not NaN. Signature: . export declare function isNotNaN(value: number, detail?: string, ...args: unknown[]): void; . ",
+    "url": "https://esdmr.github.io/assert/releases/1/esdmr.assert.numbers.isnotnan.html",
+    "relUrl": "/releases/1/esdmr.assert.numbers.isnotnan.html"
+  },"59": {
+    "doc": "isNotNaN() function",
+    "title": "Parameters",
+    "content": "| Parameter | Type | Description | . | value | number | Value to assert. | . | detail | string | Extra description. | . | args | unknown[] | Format arguments. | . Returns: . void . ",
+    "url": "https://esdmr.github.io/assert/releases/1/esdmr.assert.numbers.isnotnan.html#parameters",
+    "relUrl": "/releases/1/esdmr.assert.numbers.isnotnan.html#parameters"
+  },"60": {
+    "doc": "isPositive() function",
+    "title": "isPositive() function",
+    "content": "Home &gt; @esdmr/assert/numbers &gt; isPositive . Asserts that the given value is positive. Negative zero is considered positive. Signature: . export declare function isPositive(value: number, detail?: string, ...args: unknown[]): void; . ",
+    "url": "https://esdmr.github.io/assert/releases/1/esdmr.assert.numbers.ispositive.html",
+    "relUrl": "/releases/1/esdmr.assert.numbers.ispositive.html"
+  },"61": {
+    "doc": "isPositive() function",
+    "title": "Parameters",
+    "content": "| Parameter | Type | Description | . | value | number | Value to assert. | . | detail | string | Extra description. | . | args | unknown[] | Format arguments. | . Returns: . void . ",
+    "url": "https://esdmr.github.io/assert/releases/1/esdmr.assert.numbers.ispositive.html#parameters",
+    "relUrl": "/releases/1/esdmr.assert.numbers.ispositive.html#parameters"
+  },"62": {
+    "doc": "isSafeInteger() function",
+    "title": "isSafeInteger() function",
+    "content": "Home &gt; @esdmr/assert/numbers &gt; isSafeInteger . Asserts that the given value is a safe integer. Signature: . export declare function isSafeInteger(value: number, detail?: string, ...args: unknown[]): void; . ",
+    "url": "https://esdmr.github.io/assert/releases/1/esdmr.assert.numbers.issafeinteger.html",
+    "relUrl": "/releases/1/esdmr.assert.numbers.issafeinteger.html"
+  },"63": {
+    "doc": "isSafeInteger() function",
+    "title": "Parameters",
+    "content": "| Parameter | Type | Description | . | value | number | Value to assert. | . | detail | string | Extra description. | . | args | unknown[] | Format arguments. | . Returns: . void . ",
+    "url": "https://esdmr.github.io/assert/releases/1/esdmr.assert.numbers.issafeinteger.html#parameters",
+    "relUrl": "/releases/1/esdmr.assert.numbers.issafeinteger.html#parameters"
+  },"64": {
+    "doc": "@esdmr/assert/numbers package",
+    "title": "@esdmr/assert/numbers package",
+    "content": "Home &gt; @esdmr/assert/numbers . ",
+    "url": "https://esdmr.github.io/assert/releases/1/esdmr.assert.numbers.html",
+    "relUrl": "/releases/1/esdmr.assert.numbers.html"
+  },"65": {
+    "doc": "@esdmr/assert/numbers package",
+    "title": "Functions",
+    "content": "| Function | Description | . | isAnyInteger(value, detail, args) | Asserts that the given value is an integer. The integer may potentially be not safe. | . | isFinite_2(value, detail, args) | Asserts that the given value is finite (Not ±Infinity or NaN). | . | isGreater(value, minimum, detail, args) | Asserts that the given value is greater than the given minimum value. | . | isGreaterOrEqual(value, minimum, detail, args) | Asserts that the given value is greater than or equal to the given minimum value. | . | isLess(value, maximum, detail, args) | Asserts that the given value is less than the given maximum value. | . | isLessOrEqual(value, maximum, detail, args) | Asserts that the given value is less than or equal to the given maximum value. | . | isNotNaN(value, detail, args) | Asserts that the given value is not NaN. | . | isPositive(value, detail, args) | Asserts that the given value is positive. Negative zero is considered positive. | . | isSafeInteger(value, detail, args) | Asserts that the given value is a safe integer. | . ",
+    "url": "https://esdmr.github.io/assert/releases/1/esdmr.assert.numbers.html#functions",
+    "relUrl": "/releases/1/esdmr.assert.numbers.html#functions"
+  },"66": {
+    "doc": "FunctionLike type",
+    "title": "FunctionLike type",
+    "content": "Home &gt; @esdmr/assert/types &gt; FunctionLike . Signature: . export declare type FunctionLike = ((...args: unknown[]) =&gt; unknown) | (new (...args: unknown[]) =&gt; unknown) | (abstract new (...args: unknown[]) =&gt; unknown); . ",
+    "url": "https://esdmr.github.io/assert/releases/1/esdmr.assert.types.functionlike.html",
+    "relUrl": "/releases/1/esdmr.assert.types.functionlike.html"
+  },"67": {
+    "doc": "isBigInt() function",
+    "title": "isBigInt() function",
+    "content": "Home &gt; @esdmr/assert/types &gt; isBigInt . Asserts that the given value is a big integer. Signature: . export declare function isBigInt(value: unknown, detail?: string, ...args: unknown[]): asserts value is bigint; . ",
+    "url": "https://esdmr.github.io/assert/releases/1/esdmr.assert.types.isbigint.html",
+    "relUrl": "/releases/1/esdmr.assert.types.isbigint.html"
+  },"68": {
+    "doc": "isBigInt() function",
+    "title": "Parameters",
+    "content": "| Parameter | Type | Description | . | value | unknown | Value to assert. | . | detail | string | Extra description. | . | args | unknown[] | Format arguments. | . Returns: . asserts value is bigint . ",
+    "url": "https://esdmr.github.io/assert/releases/1/esdmr.assert.types.isbigint.html#parameters",
+    "relUrl": "/releases/1/esdmr.assert.types.isbigint.html#parameters"
+  },"69": {
+    "doc": "isBoolean() function",
+    "title": "isBoolean() function",
+    "content": "Home &gt; @esdmr/assert/types &gt; isBoolean . Asserts that the given value is a boolean. Signature: . export declare function isBoolean(value: unknown, detail?: string, ...args: unknown[]): asserts value is boolean; . ",
+    "url": "https://esdmr.github.io/assert/releases/1/esdmr.assert.types.isboolean.html",
+    "relUrl": "/releases/1/esdmr.assert.types.isboolean.html"
+  },"70": {
+    "doc": "isBoolean() function",
+    "title": "Parameters",
+    "content": "| Parameter | Type | Description | . | value | unknown | Value to assert. | . | detail | string | Extra description. | . | args | unknown[] | Format arguments. | . Returns: . asserts value is boolean . ",
+    "url": "https://esdmr.github.io/assert/releases/1/esdmr.assert.types.isboolean.html#parameters",
+    "relUrl": "/releases/1/esdmr.assert.types.isboolean.html#parameters"
+  },"71": {
+    "doc": "isFunction() function",
+    "title": "isFunction() function",
+    "content": "Home &gt; @esdmr/assert/types &gt; isFunction . Asserts that the given value is a function. Signature: . export declare function isFunction(value: unknown, detail?: string, ...args: unknown[]): asserts value is FunctionLike; . ",
+    "url": "https://esdmr.github.io/assert/releases/1/esdmr.assert.types.isfunction.html",
+    "relUrl": "/releases/1/esdmr.assert.types.isfunction.html"
+  },"72": {
+    "doc": "isFunction() function",
+    "title": "Parameters",
+    "content": "| Parameter | Type | Description | . | value | unknown | Value to assert. | . | detail | string | Extra description. | . | args | unknown[] | Format arguments. | . Returns: . asserts value is FunctionLike . ",
+    "url": "https://esdmr.github.io/assert/releases/1/esdmr.assert.types.isfunction.html#parameters",
+    "relUrl": "/releases/1/esdmr.assert.types.isfunction.html#parameters"
+  },"73": {
+    "doc": "isInstanceOf() function",
+    "title": "isInstanceOf() function",
+    "content": "Home &gt; @esdmr/assert/types &gt; isInstanceOf . Asserts that the given value is an instance of a constructor. Signature: . export declare function isInstanceOf&lt;T&gt;(value: unknown, Constructor: TypedConstructor&lt;T&gt;, detail?: string, ...args: unknown[]): asserts value is T; . ",
+    "url": "https://esdmr.github.io/assert/releases/1/esdmr.assert.types.isinstanceof.html",
+    "relUrl": "/releases/1/esdmr.assert.types.isinstanceof.html"
+  },"74": {
+    "doc": "isInstanceOf() function",
+    "title": "Parameters",
+    "content": "| Parameter | Type | Description | . | value | unknown | Value to assert. | . | Constructor | TypedConstructor&lt;T&gt; | The constructor to check value with. | . | detail | string | Extra description. | . | args | unknown[] | Format arguments. | . Returns: . asserts value is T . ",
+    "url": "https://esdmr.github.io/assert/releases/1/esdmr.assert.types.isinstanceof.html#parameters",
+    "relUrl": "/releases/1/esdmr.assert.types.isinstanceof.html#parameters"
+  },"75": {
+    "doc": "isNumber() function",
+    "title": "isNumber() function",
+    "content": "Home &gt; @esdmr/assert/types &gt; isNumber . Asserts that the given value is a number. Signature: . export declare function isNumber(value: unknown, detail?: string, ...args: unknown[]): asserts value is number; . ",
+    "url": "https://esdmr.github.io/assert/releases/1/esdmr.assert.types.isnumber.html",
+    "relUrl": "/releases/1/esdmr.assert.types.isnumber.html"
+  },"76": {
+    "doc": "isNumber() function",
+    "title": "Parameters",
+    "content": "| Parameter | Type | Description | . | value | unknown | Value to assert. | . | detail | string | Extra description. | . | args | unknown[] | Format arguments. | . Returns: . asserts value is number . ",
+    "url": "https://esdmr.github.io/assert/releases/1/esdmr.assert.types.isnumber.html#parameters",
+    "relUrl": "/releases/1/esdmr.assert.types.isnumber.html#parameters"
+  },"77": {
+    "doc": "isObject() function",
+    "title": "isObject() function",
+    "content": "Home &gt; @esdmr/assert/types &gt; isObject . Asserts that the given value is an object. The object may potentially be null. Signature: . export declare function isObject(value: unknown, detail?: string, ...args: unknown[]): asserts value is ObjectLike | null; . ",
+    "url": "https://esdmr.github.io/assert/releases/1/esdmr.assert.types.isobject.html",
+    "relUrl": "/releases/1/esdmr.assert.types.isobject.html"
+  },"78": {
+    "doc": "isObject() function",
+    "title": "Parameters",
+    "content": "| Parameter | Type | Description | . | value | unknown | Value to assert. | . | detail | string | Extra description. | . | args | unknown[] | Format arguments. | . Returns: . asserts value is ObjectLike | null . ",
+    "url": "https://esdmr.github.io/assert/releases/1/esdmr.assert.types.isobject.html#parameters",
+    "relUrl": "/releases/1/esdmr.assert.types.isobject.html#parameters"
+  },"79": {
+    "doc": "isString() function",
+    "title": "isString() function",
+    "content": "Home &gt; @esdmr/assert/types &gt; isString . Asserts that the given value is a string. Signature: . export declare function isString(value: unknown, detail?: string, ...args: unknown[]): asserts value is string; . ",
+    "url": "https://esdmr.github.io/assert/releases/1/esdmr.assert.types.isstring.html",
+    "relUrl": "/releases/1/esdmr.assert.types.isstring.html"
+  },"80": {
+    "doc": "isString() function",
+    "title": "Parameters",
+    "content": "| Parameter | Type | Description | . | value | unknown | Value to assert. | . | detail | string | Extra description. | . | args | unknown[] | Format arguments. | . Returns: . asserts value is string . ",
+    "url": "https://esdmr.github.io/assert/releases/1/esdmr.assert.types.isstring.html#parameters",
+    "relUrl": "/releases/1/esdmr.assert.types.isstring.html#parameters"
+  },"81": {
+    "doc": "isSymbol() function",
+    "title": "isSymbol() function",
+    "content": "Home &gt; @esdmr/assert/types &gt; isSymbol . Asserts that the given value is a symbol. Signature: . export declare function isSymbol(value: unknown, detail?: string, ...args: unknown[]): asserts value is symbol; . ",
+    "url": "https://esdmr.github.io/assert/releases/1/esdmr.assert.types.issymbol.html",
+    "relUrl": "/releases/1/esdmr.assert.types.issymbol.html"
+  },"82": {
+    "doc": "isSymbol() function",
+    "title": "Parameters",
+    "content": "| Parameter | Type | Description | . | value | unknown | Value to assert. | . | detail | string | Extra description. | . | args | unknown[] | Format arguments. | . Returns: . asserts value is symbol . ",
+    "url": "https://esdmr.github.io/assert/releases/1/esdmr.assert.types.issymbol.html#parameters",
+    "relUrl": "/releases/1/esdmr.assert.types.issymbol.html#parameters"
+  },"83": {
+    "doc": "@esdmr/assert/types package",
+    "title": "@esdmr/assert/types package",
+    "content": "Home &gt; @esdmr/assert/types . ",
+    "url": "https://esdmr.github.io/assert/releases/1/esdmr.assert.types.html",
+    "relUrl": "/releases/1/esdmr.assert.types.html"
+  },"84": {
+    "doc": "@esdmr/assert/types package",
+    "title": "Functions",
+    "content": "| Function | Description | . | isBigInt(value, detail, args) | Asserts that the given value is a big integer. | . | isBoolean(value, detail, args) | Asserts that the given value is a boolean. | . | isFunction(value, detail, args) | Asserts that the given value is a function. | . | isInstanceOf(value, Constructor, detail, args) | Asserts that the given value is an instance of a constructor. | . | isNumber(value, detail, args) | Asserts that the given value is a number. | . | isObject(value, detail, args) | Asserts that the given value is an object. The object may potentially be null. | . | isString(value, detail, args) | Asserts that the given value is a string. | . | isSymbol(value, detail, args) | Asserts that the given value is a symbol. | . ",
+    "url": "https://esdmr.github.io/assert/releases/1/esdmr.assert.types.html#functions",
+    "relUrl": "/releases/1/esdmr.assert.types.html#functions"
+  },"85": {
+    "doc": "@esdmr/assert/types package",
+    "title": "Type Aliases",
+    "content": "| Type Alias | Description | . | FunctionLike |   | . | ObjectLike |   | . | TypedConstructor |   | . ",
+    "url": "https://esdmr.github.io/assert/releases/1/esdmr.assert.types.html#type-aliases",
+    "relUrl": "/releases/1/esdmr.assert.types.html#type-aliases"
+  },"86": {
+    "doc": "ObjectLike type",
+    "title": "ObjectLike type",
+    "content": "Home &gt; @esdmr/assert/types &gt; ObjectLike . Signature: . export declare type ObjectLike = Record&lt;string, unknown&gt;; . ",
+    "url": "https://esdmr.github.io/assert/releases/1/esdmr.assert.types.objectlike.html",
+    "relUrl": "/releases/1/esdmr.assert.types.objectlike.html"
+  },"87": {
+    "doc": "TypedConstructor type",
+    "title": "TypedConstructor type",
+    "content": "Home &gt; @esdmr/assert/types &gt; TypedConstructor . Signature: . export declare type TypedConstructor&lt;T&gt; = (new (...args: unknown[]) =&gt; T) | (abstract new (...args: unknown[]) =&gt; T); . ",
+    "url": "https://esdmr.github.io/assert/releases/1/esdmr.assert.types.typedconstructor.html",
+    "relUrl": "/releases/1/esdmr.assert.types.typedconstructor.html"
+  },"88": {
+    "doc": "releases/1",
+    "title": "releases/1",
+    "content": "From commit 4498b3cfbe78fefee2650f985a65e6a0e56feb77 . ",
+    "url": "https://esdmr.github.io/assert/releases/1/",
+    "relUrl": "/releases/1/"
+  },"89": {
+    "doc": "releases/1",
+    "title": "Packages",
+    "content": "Home . | Package | . | @esdmr/assert/nullables | . | @esdmr/assert/types | . | @esdmr/assert/errors | . | @esdmr/assert/numbers | . | @esdmr/assert/assert | . ",
+    "url": "https://esdmr.github.io/assert/releases/1/#packages",
+    "relUrl": "/releases/1/#packages"
+  },"90": {
+    "doc": "Assert",
+    "title": "Assert",
+    "content": ". Assertion library for JavaScript. ",
+    "url": "https://esdmr.github.io/assert/",
+    "relUrl": "/"
+  },"91": {
+    "doc": "Assert",
+    "title": "Install as a dependency",
+    "content": "This project requires Node.JS version 16 minimum. Ensure that you have installed the correct version of Node.JS by running node --version. Any of the following snippets will install this project as a dependency: . npm install --save @esdmr/assert # Or yarn add @esdmr/assert # Or pnpm install @esdmr/assert . ",
+    "url": "https://esdmr.github.io/assert/#install-as-a-dependency",
+    "relUrl": "/#install-as-a-dependency"
+  },"92": {
+    "doc": "Assert",
+    "title": "Install from source",
+    "content": "This project requires Node.JS version 16 minimum. Ensure that you have installed the correct version of Node.JS by running node --version. This project recommends pnpm version 6. Ensure that you have installed the correct version of pnpm by running pnpm --version. The following snippet will download, install, and build the source from GitHub: . git clone https://github.com/esdmr/assert.git cd assert pnpm install pnpm run build . ",
+    "url": "https://esdmr.github.io/assert/#install-from-source",
+    "relUrl": "/#install-from-source"
+  },"93": {
+    "doc": "Assert",
+    "title": "Documentation",
+    "content": "Available at the GitHub Pages. ",
+    "url": "https://esdmr.github.io/assert/#documentation",
+    "relUrl": "/#documentation"
+  },"94": {
+    "doc": "Assert",
+    "title": "Template",
+    "content": "This project generated from esdmr/template. See its wiki on how to contribute to this project. ",
+    "url": "https://esdmr.github.io/assert/#template",
+    "relUrl": "/#template"
+  },"95": {
+    "doc": "Assert",
+    "title": "License",
+    "content": "See License. ",
+    "url": "https://esdmr.github.io/assert/#license",
+    "relUrl": "/#license"
+  }
+}
