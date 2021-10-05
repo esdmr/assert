@@ -8,7 +8,7 @@ await test('isNotNull', async (t) => {
 		() => {
 			nullables.isNotNull(null);
 		},
-		new TypeError(messages.IS_NULL),
+		new TypeError(messages.isNull),
 		'expected to throw an error if the value is null',
 	);
 
@@ -21,7 +21,7 @@ await test('isNotNull', async (t) => {
 
 	await testDetail(t, (...args) => {
 		nullables.isNotNull(null, ...args);
-	}, TypeError, messages.IS_NULL);
+	}, TypeError, messages.isNull);
 });
 
 await test('isNonNullable', async (t) => {
@@ -29,7 +29,7 @@ await test('isNonNullable', async (t) => {
 		() => {
 			nullables.isNonNullable(null);
 		},
-		new TypeError(messages.IS_NULLABLE),
+		new TypeError(messages.isNullable),
 		'expected to throw an error if the value is null',
 	);
 
@@ -37,7 +37,7 @@ await test('isNonNullable', async (t) => {
 		() => {
 			nullables.isNonNullable(undefined);
 		},
-		new TypeError(messages.IS_NULLABLE),
+		new TypeError(messages.isNullable),
 		'expected to throw an error if the value is undefined',
 	);
 
@@ -50,7 +50,7 @@ await test('isNonNullable', async (t) => {
 
 	await testDetail(t, (...args) => {
 		nullables.isNonNullable(undefined, ...args);
-	}, TypeError, messages.IS_NULLABLE);
+	}, TypeError, messages.isNullable);
 });
 
 await test('isNotUndefined', async (t) => {
@@ -58,7 +58,7 @@ await test('isNotUndefined', async (t) => {
 		() => {
 			nullables.isNotUndefined(undefined);
 		},
-		new TypeError(messages.IS_UNDEFINED),
+		new TypeError(messages.isUndefined),
 		'expected to throw an error if the value is undefined',
 	);
 
@@ -71,5 +71,5 @@ await test('isNotUndefined', async (t) => {
 
 	await testDetail(t, (...args) => {
 		nullables.isNotUndefined(undefined, ...args);
-	}, TypeError, messages.IS_UNDEFINED);
+	}, TypeError, messages.isUndefined);
 });

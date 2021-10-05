@@ -12,17 +12,17 @@ const floatValues = {
 	0.5: 0.5,
 	1: 1,
 	1.5: 1.5,
-	POSITIVE_EPSILON: Number.EPSILON,
-	NEGATIVE_EPSILON: -Number.EPSILON,
-	POSITIVE_INFINITY: Number.POSITIVE_INFINITY,
-	NEGATIVE_INFINITY: Number.NEGATIVE_INFINITY,
-	MAX_SAFE_INTEGER: Number.MAX_SAFE_INTEGER,
-	MIN_SAFE_INTEGER: Number.MIN_SAFE_INTEGER,
-	POSITIVE_MAX_VALUE: Number.MAX_VALUE,
-	NEGATIVE_MAX_VALUE: -Number.MAX_VALUE,
-	POSITIVE_MIN_VALUE: Number.MIN_VALUE,
-	NEGATIVE_MIN_VALUE: -Number.MIN_VALUE,
-	NaN: Number.NaN,
+	positiveEpsilon: Number.EPSILON,
+	negativeEpsilon: -Number.EPSILON,
+	positiveInfinity: Number.POSITIVE_INFINITY,
+	negativeInfinity: Number.NEGATIVE_INFINITY,
+	maxSafeInteger: Number.MAX_SAFE_INTEGER,
+	minSafeInteger: Number.MIN_SAFE_INTEGER,
+	positiveMaxValue: Number.MAX_VALUE,
+	negativeMaxValue: -Number.MAX_VALUE,
+	positiveMinValue: Number.MIN_VALUE,
+	negativeMinValue: -Number.MIN_VALUE,
+	nan: Number.NaN,
 } as const;
 
 type FloatValues = keyof typeof floatValues;
@@ -55,88 +55,88 @@ function testFloat (
 }
 
 await test('isNotNaN', async (t) => {
-	testFloat(t, numbers.isNotNaN, messages.IS_NAN, {
-		NaN: false,
+	testFloat(t, numbers.isNotNaN, messages.isNaN, {
+		nan: false,
 	});
 
 	await testDetail(t, (...args) => {
 		numbers.isNotNaN(Number.NaN, ...args);
-	}, RangeError, messages.IS_NAN);
+	}, RangeError, messages.isNaN);
 });
 
 await test('isFinite', async (t) => {
-	testFloat(t, numbers.isFinite, messages.NOT_FINITE, {
-		POSITIVE_INFINITY: false,
-		NEGATIVE_INFINITY: false,
-		NaN: false,
+	testFloat(t, numbers.isFinite, messages.notFinite, {
+		positiveInfinity: false,
+		negativeInfinity: false,
+		nan: false,
 	});
 
 	await testDetail(t, (...args) => {
 		numbers.isFinite(Number.POSITIVE_INFINITY, ...args);
-	}, RangeError, messages.NOT_FINITE);
+	}, RangeError, messages.notFinite);
 });
 
 await test('isAnyInteger', async (t) => {
-	testFloat(t, numbers.isAnyInteger, messages.NOT_INTEGER, {
+	testFloat(t, numbers.isAnyInteger, messages.notInteger, {
 		[-1.5]: false,
 		[-0.5]: false,
 		0.5: false,
 		1.5: false,
-		POSITIVE_EPSILON: false,
-		NEGATIVE_EPSILON: false,
-		POSITIVE_INFINITY: false,
-		NEGATIVE_INFINITY: false,
-		POSITIVE_MIN_VALUE: false,
-		NEGATIVE_MIN_VALUE: false,
-		NaN: false,
+		positiveEpsilon: false,
+		negativeEpsilon: false,
+		positiveInfinity: false,
+		negativeInfinity: false,
+		positiveMinValue: false,
+		negativeMinValue: false,
+		nan: false,
 	});
 
 	await testDetail(t, (...args) => {
 		numbers.isAnyInteger(0.5, ...args);
-	}, RangeError, messages.NOT_INTEGER);
+	}, RangeError, messages.notInteger);
 });
 
 await test('isPositive', async (t) => {
-	testFloat(t, numbers.isPositive, messages.NOT_POSITIVE, {
+	testFloat(t, numbers.isPositive, messages.notPositive, {
 		[-1.5]: false,
 		[-1]: false,
 		[-0.5]: false,
-		NEGATIVE_EPSILON: false,
-		NEGATIVE_INFINITY: false,
-		MIN_SAFE_INTEGER: false,
-		NEGATIVE_MAX_VALUE: false,
-		NEGATIVE_MIN_VALUE: false,
+		negativeEpsilon: false,
+		negativeInfinity: false,
+		minSafeInteger: false,
+		negativeMaxValue: false,
+		negativeMinValue: false,
 	});
 
 	await testDetail(t, (...args) => {
 		numbers.isPositive(-1, ...args);
-	}, RangeError, messages.NOT_POSITIVE);
+	}, RangeError, messages.notPositive);
 });
 
 await test('isSafeInteger', async (t) => {
-	testFloat(t, numbers.isSafeInteger, messages.NOT_SAFE_INTEGER, {
+	testFloat(t, numbers.isSafeInteger, messages.notSafeInteger, {
 		[-1.5]: false,
 		[-0.5]: false,
 		0.5: false,
 		1.5: false,
-		POSITIVE_EPSILON: false,
-		NEGATIVE_EPSILON: false,
-		POSITIVE_INFINITY: false,
-		NEGATIVE_INFINITY: false,
-		POSITIVE_MAX_VALUE: false,
-		NEGATIVE_MAX_VALUE: false,
-		POSITIVE_MIN_VALUE: false,
-		NEGATIVE_MIN_VALUE: false,
-		NaN: false,
+		positiveEpsilon: false,
+		negativeEpsilon: false,
+		positiveInfinity: false,
+		negativeInfinity: false,
+		positiveMaxValue: false,
+		negativeMaxValue: false,
+		positiveMinValue: false,
+		negativeMinValue: false,
+		nan: false,
 	});
 
 	await testDetail(t, (...args) => {
 		numbers.isSafeInteger(0.5, ...args);
-	}, RangeError, messages.NOT_SAFE_INTEGER);
+	}, RangeError, messages.notSafeInteger);
 });
 
 await test('isGreater', async (t) => {
-	const message = format(messages.NOT_GREATER, 0);
+	const message = format(messages.notGreater, 0);
 	const error = new RangeError(message);
 
 	t.doesNotThrow(
@@ -168,7 +168,7 @@ await test('isGreater', async (t) => {
 });
 
 await test('isGreaterOrEqual', async (t) => {
-	const message = format(messages.NOT_GREATER_OR_EQUAL, 0);
+	const message = format(messages.notGreaterOrEqual, 0);
 	const error = new RangeError(message);
 
 	t.doesNotThrow(
@@ -199,7 +199,7 @@ await test('isGreaterOrEqual', async (t) => {
 });
 
 await test('isLess', async (t) => {
-	const message = format(messages.NOT_LESS, 0);
+	const message = format(messages.notLess, 0);
 	const error = new RangeError(message);
 
 	t.throws(
@@ -231,7 +231,7 @@ await test('isLess', async (t) => {
 });
 
 await test('isLessOrEqual', async (t) => {
-	const message = format(messages.NOT_LESS_OR_EQUAL, 0);
+	const message = format(messages.notLessOrEqual, 0);
 	const error = new RangeError(message);
 
 	t.throws(
