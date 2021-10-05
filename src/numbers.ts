@@ -12,7 +12,7 @@ import { addDetail, format } from './utils.js';
 export function isNotNaN (value: number, detail?: string, ...args: unknown[]) {
 	if (Number.isNaN(value)) {
 		throw new RangeError(format(
-			addDetail(messages.IS_NAN, detail),
+			addDetail(messages.isNaN, detail),
 			...args,
 		));
 	}
@@ -29,7 +29,7 @@ export function isNotNaN (value: number, detail?: string, ...args: unknown[]) {
 export function isFinite (value: number, detail?: string, ...args: unknown[]) {
 	if (!Number.isFinite(value)) {
 		throw new RangeError(format(
-			addDetail(messages.NOT_FINITE, detail),
+			addDetail(messages.notFinite, detail),
 			...args,
 		));
 	}
@@ -47,7 +47,7 @@ export function isFinite (value: number, detail?: string, ...args: unknown[]) {
 export function isAnyInteger (value: number, detail?: string, ...args: unknown[]) {
 	if (!Number.isInteger(value)) {
 		throw new RangeError(format(
-			addDetail(messages.NOT_INTEGER, detail),
+			addDetail(messages.notInteger, detail),
 			...args,
 		));
 	}
@@ -64,7 +64,7 @@ export function isAnyInteger (value: number, detail?: string, ...args: unknown[]
 export function isPositive (value: number, detail?: string, ...args: unknown[]) {
 	if (value < 0) {
 		throw new RangeError(format(
-			addDetail(messages.NOT_POSITIVE, detail),
+			addDetail(messages.notPositive, detail),
 			...args,
 		));
 	}
@@ -81,7 +81,7 @@ export function isPositive (value: number, detail?: string, ...args: unknown[]) 
 export function isSafeInteger (value: number, detail?: string, ...args: unknown[]) {
 	if (!Number.isSafeInteger(value)) {
 		throw new RangeError(format(
-			addDetail(messages.NOT_SAFE_INTEGER, detail),
+			addDetail(messages.notSafeInteger, detail),
 			...args,
 		));
 	}
@@ -103,7 +103,7 @@ export function isGreater (
 ) {
 	if (value <= minimum) {
 		throw new RangeError(format(
-			addDetail(messages.NOT_GREATER, detail),
+			addDetail(messages.notGreater, detail),
 			minimum,
 			...args,
 		));
@@ -127,7 +127,7 @@ export function isGreaterOrEqual (
 ) {
 	if (value < minimum) {
 		throw new RangeError(format(
-			addDetail(messages.NOT_GREATER_OR_EQUAL, detail),
+			addDetail(messages.notGreaterOrEqual, detail),
 			minimum,
 			...args,
 		));
@@ -150,7 +150,7 @@ export function isLess (
 ) {
 	if (value >= maximum) {
 		throw new RangeError(format(
-			addDetail(messages.NOT_LESS, detail),
+			addDetail(messages.notLess, detail),
 			maximum,
 			...args,
 		));
@@ -174,7 +174,7 @@ export function isLessOrEqual (
 ) {
 	if (value > maximum) {
 		throw new RangeError(format(
-			addDetail(messages.NOT_LESS_OR_EQUAL, detail),
+			addDetail(messages.notLessOrEqual, detail),
 			maximum,
 			...args,
 		));

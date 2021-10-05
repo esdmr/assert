@@ -54,19 +54,6 @@ export class AssertionError extends Error {
  * @public
  */
 export class PrimitiveError extends Error {
-	name = 'PrimitiveError';
-	stack = getErrorMessage(this);
-	readonly value: unknown;
-
-	constructor (value: unknown) {
-		super(String(value));
-
-		// This marks the property as not enumerable and not writable.
-		Object.defineProperty(this, 'value', {
-			value,
-		});
-	}
-
 	/**
 	 * Convert any value to an Error object if it is not already.
 	 *
@@ -91,6 +78,19 @@ export class PrimitiveError extends Error {
 		}
 
 		return new PrimitiveError(value);
+	}
+
+	name = 'PrimitiveError';
+	stack = getErrorMessage(this);
+	readonly value: unknown;
+
+	constructor (value: unknown) {
+		super(String(value));
+
+		// This marks the property as not enumerable and not writable.
+		Object.defineProperty(this, 'value', {
+			value,
+		});
 	}
 }
 

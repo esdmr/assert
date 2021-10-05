@@ -17,7 +17,7 @@ await test('assert', async (t) => {
 		() => {
 			assert.assert(false);
 		},
-		new AssertionError(messages.DEFAULT_MESSAGE),
+		new AssertionError(messages.defaultMessage),
 		'expected to throw the default message if condition is false',
 	);
 
@@ -27,7 +27,7 @@ await test('assert', async (t) => {
 });
 
 await test('wrap', async (t) => {
-	t.strictSame(assert.wrap('value'), assert.wrap('value', messages.DEFAULT_MESSAGE),
+	t.strictSame(assert.wrap('value'), assert.wrap('value', messages.defaultMessage),
 		'expected to use the default message if not given one');
 
 	await testFormat(t, (...args) => {
@@ -47,7 +47,7 @@ await test('isEqual', async (t) => {
 		() => {
 			assert.isEqual(true, false);
 		},
-		new AssertionError(format(messages.NOT_EQUAL, false)),
+		new AssertionError(format(messages.notEqual, false)),
 		'expected to throw for not equal values',
 	);
 
@@ -55,13 +55,13 @@ await test('isEqual', async (t) => {
 		() => {
 			assert.isEqual<number | boolean>(0, false);
 		},
-		new AssertionError(format(messages.NOT_EQUAL, false)),
+		new AssertionError(format(messages.notEqual, false)),
 		'expected to throw for not equal types with same value',
 	);
 
 	await testDetail(t, (...args) => {
 		assert.isEqual(true, false, ...args);
-	}, (message: string) => new AssertionError(message), format(messages.NOT_EQUAL, false));
+	}, (message: string) => new AssertionError(message), format(messages.notEqual, false));
 });
 
 await test('isNotEqual', async (t) => {
@@ -69,7 +69,7 @@ await test('isNotEqual', async (t) => {
 		() => {
 			assert.isNotEqual(0, 0);
 		},
-		new AssertionError(format(messages.IS_EQUAL, 0)),
+		new AssertionError(format(messages.isEqual, 0)),
 		'expected to throw for equal values',
 	);
 
@@ -89,5 +89,5 @@ await test('isNotEqual', async (t) => {
 
 	await testDetail(t, (...args) => {
 		assert.isNotEqual(false, false, ...args);
-	}, (message: string) => new AssertionError(message), format(messages.IS_EQUAL, false));
+	}, (message: string) => new AssertionError(message), format(messages.isEqual, false));
 });

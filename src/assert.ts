@@ -12,7 +12,7 @@ import { addDetail, format } from './utils.js';
  */
 export function assert (
 	condition: boolean,
-	message = messages.DEFAULT_MESSAGE,
+	message = messages.defaultMessage,
 	...args: unknown[]
 ): asserts condition {
 	if (!condition) {
@@ -30,7 +30,7 @@ export function assert (
  */
 export function wrap (
 	thrownValue: unknown,
-	message = messages.DEFAULT_MESSAGE,
+	message = messages.defaultMessage,
 	...args: unknown[]
 ) {
 	return new WrappedError(format(message, ...args), thrownValue);
@@ -52,7 +52,7 @@ export function isEqual<T> (
 ) {
 	if (value !== expectedValue) {
 		throw new AssertionError(format(
-			addDetail(messages.NOT_EQUAL, detail),
+			addDetail(messages.notEqual, detail),
 			expectedValue,
 			...args,
 		));
@@ -75,7 +75,7 @@ export function isNotEqual<T> (
 ) {
 	if (value === expectedValue) {
 		throw new AssertionError(format(
-			addDetail(messages.IS_EQUAL, detail),
+			addDetail(messages.isEqual, detail),
 			expectedValue,
 			...args,
 		));

@@ -48,67 +48,67 @@ function testType (
 }
 
 await test('isBigInt', async (t) => {
-	testType(t, types.isBigInt, messages.NOT_BIGINT, 'bigint');
+	testType(t, types.isBigInt, messages.notBigInt, 'bigint');
 
 	await testDetail(t, (...args) => {
 		types.isBigInt(undefined, ...args);
-	}, TypeError, messages.NOT_BIGINT);
+	}, TypeError, messages.notBigInt);
 });
 
 await test('isBoolean', async (t) => {
-	testType(t, types.isBoolean, messages.NOT_BOOLEAN, 'boolean');
+	testType(t, types.isBoolean, messages.notBoolean, 'boolean');
 
 	await testDetail(t, (...args) => {
 		types.isBoolean(undefined, ...args);
-	}, TypeError, messages.NOT_BOOLEAN);
+	}, TypeError, messages.notBoolean);
 });
 
 await test('isFunction', async (t) => {
-	testType(t, types.isFunction, messages.NOT_FUNCTION, 'function');
+	testType(t, types.isFunction, messages.notFunction, 'function');
 
 	await testDetail(t, (...args) => {
 		types.isFunction(undefined, ...args);
-	}, TypeError, messages.NOT_FUNCTION);
+	}, TypeError, messages.notFunction);
 });
 
 await test('isInstanceOf', async (t) => {
 	testType(t, (value) => {
 		types.isInstanceOf(value, TestObject);
-	}, format(messages.NOT_INSTANCE_OF, TestObject.name), 'test');
+	}, format(messages.notInstanceOf, TestObject.name), 'test');
 
 	await testDetail(t, (...args) => {
 		types.isFunction(undefined, ...args);
-	}, TypeError, messages.NOT_FUNCTION);
+	}, TypeError, messages.notFunction);
 });
 
 await test('isNumber', async (t) => {
-	testType(t, types.isNumber, messages.NOT_NUMBER, 'number');
+	testType(t, types.isNumber, messages.notNumber, 'number');
 
 	await testDetail(t, (...args) => {
 		types.isNumber(undefined, ...args);
-	}, TypeError, messages.NOT_NUMBER);
+	}, TypeError, messages.notNumber);
 });
 
 await test('isObject', async (t) => {
-	testType(t, types.isObject, messages.NOT_OBJECT, 'object', 'test');
+	testType(t, types.isObject, messages.notObject, 'object', 'test');
 
 	await testDetail(t, (...args) => {
 		types.isObject(undefined, ...args);
-	}, TypeError, messages.NOT_OBJECT);
+	}, TypeError, messages.notObject);
 });
 
 await test('isString', async (t) => {
-	testType(t, types.isString, messages.NOT_STRING, 'string');
+	testType(t, types.isString, messages.notString, 'string');
 
 	await testDetail(t, (...args) => {
 		types.isString(undefined, ...args);
-	}, TypeError, messages.NOT_STRING);
+	}, TypeError, messages.notString);
 });
 
 await test('isSymbol', async (t) => {
-	testType(t, types.isSymbol, messages.NOT_SYMBOL, 'symbol');
+	testType(t, types.isSymbol, messages.notSymbol, 'symbol');
 
 	await testDetail(t, (...args) => {
 		types.isSymbol(undefined, ...args);
-	}, TypeError, messages.NOT_SYMBOL);
+	}, TypeError, messages.notSymbol);
 });

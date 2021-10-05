@@ -30,7 +30,7 @@ export function isBigInt (
 ): asserts value is bigint {
 	if (typeof value !== 'bigint') {
 		throw new TypeError(format(
-			addDetail(messages.NOT_BIGINT, detail),
+			addDetail(messages.notBigInt, detail),
 			...args,
 		));
 	}
@@ -51,7 +51,7 @@ export function isBoolean (
 ): asserts value is boolean {
 	if (typeof value !== 'boolean') {
 		throw new TypeError(format(
-			addDetail(messages.NOT_BOOLEAN, detail),
+			addDetail(messages.notBoolean, detail),
 			...args,
 		));
 	}
@@ -72,7 +72,7 @@ export function isFunction (
 ): asserts value is FunctionLike {
 	if (typeof value !== 'function') {
 		throw new TypeError(format(
-			addDetail(messages.NOT_FUNCTION, detail),
+			addDetail(messages.notFunction, detail),
 			...args,
 		));
 	}
@@ -95,7 +95,7 @@ export function isInstanceOf<T> (
 ): asserts value is T {
 	if (!(value instanceof Constructor)) {
 		throw new TypeError(format(
-			addDetail(messages.NOT_INSTANCE_OF, detail),
+			addDetail(messages.notInstanceOf, detail),
 			Constructor.name,
 			...args,
 		));
@@ -117,7 +117,7 @@ export function isNumber (
 ): asserts value is number {
 	if (typeof value !== 'number') {
 		throw new TypeError(format(
-			addDetail(messages.NOT_NUMBER, detail),
+			addDetail(messages.notNumber, detail),
 			...args,
 		));
 	}
@@ -139,7 +139,7 @@ export function isObject (
 ): asserts value is ObjectLike | null {
 	if (typeof value !== 'object') {
 		throw new TypeError(format(
-			addDetail(messages.NOT_OBJECT, detail),
+			addDetail(messages.notObject, detail),
 			...args,
 		));
 	}
@@ -160,7 +160,7 @@ export function isString (
 ): asserts value is string {
 	if (typeof value !== 'string') {
 		throw new TypeError(format(
-			addDetail(messages.NOT_STRING, detail),
+			addDetail(messages.notString, detail),
 			...args,
 		));
 	}
@@ -181,7 +181,7 @@ export function isSymbol (
 ): asserts value is symbol {
 	if (typeof value !== 'symbol') {
 		throw new TypeError(format(
-			addDetail(messages.NOT_SYMBOL, detail),
+			addDetail(messages.notSymbol, detail),
 			...args,
 		));
 	}
