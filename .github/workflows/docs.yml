@@ -42,7 +42,7 @@ jobs:
           node-version: ${{ env.JOB_NODE_VERSION }}
 
       - name: Setup pnpm
-        uses: pnpm/action-setup@bcad811784fb09d282bb1a9a98dfc18f758fbd9e
+        uses: pnpm/action-setup@3c2fe8c59284aae169107529dce6c78999f48956
         with:
           version: ${{ env.JOB_PNPM_VERSION }}
 
@@ -64,7 +64,7 @@ jobs:
 
       # Checkout
       - name: Create documentation branch if non-existent
-        uses: esdmr/action-create-branch@cde5be66dae4dc5547ba71e1cdf8522708eba723
+        uses: esdmr/action-create-branch@bf44b7e08d5d61a072ae154ff81b5bbe46ce373c
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
@@ -108,7 +108,7 @@ jobs:
 
       - name: Check GitHub Pages status
         if: success() && steps.skip_check.outputs.should_skip != 'true'
-        uses: crazy-max/ghaction-github-status@9b36a0224da450ffd12b5845caf5daee65c248fc
+        uses: crazy-max/ghaction-github-status@f24b3edb04b11d250ca69ee6d5bf031b0c2c8926
         with:
           pages_threshold: major_outage
 
@@ -121,7 +121,7 @@ jobs:
 
       - name: Setup Ruby
         if: success() && steps.skip_check.outputs.should_skip != 'true'
-        uses: ruby/setup-ruby@ac03cb7d18ed0b67859fd440399a039df4839344
+        uses: ruby/setup-ruby@f514fbcdacf28f0e4054fb66bcbdb47b1a3d7b15
         with:
           working-directory: docs
           ruby-version: ${{ env.JOB_RUBY_VERSION }}
@@ -134,7 +134,7 @@ jobs:
 
       - name: Deploy to GitHub Pages
         if: success() && steps.skip_check.outputs.should_skip != 'true'
-        uses: crazy-max/ghaction-github-pages@8e7a38741f9cdbd9b6c87b43cdc405706dbed1ed
+        uses: crazy-max/ghaction-github-pages@1ae239f7b822f4ef2d57ca2c7792713696508b10
         with:
           target_branch: gh-pages
           build_dir: docs/_site
