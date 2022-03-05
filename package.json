@@ -68,9 +68,9 @@
     "@changesets/cli": "2.19.0",
     "@istanbuljs/esm-loader-hook": "0.1.2",
     "@types/node": "16.11.25",
-    "@types/tap": "15.0.5",
+    "@types/tap": "15.0.6",
     "rimraf": "3.0.2",
-    "tap": "15.1.6",
+    "tap": "15.2.2",
     "typescript": "4.6.2",
     "xo": "0.47.0"
   },
