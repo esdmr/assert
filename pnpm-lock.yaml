@@ -11,9 +11,9 @@ specifiers:
   '@changesets/cli': 2.19.0
   '@istanbuljs/esm-loader-hook': 0.1.2
   '@types/node': ^16.0.0
-  '@types/tap': 15.0.5
+  '@types/tap': 15.0.6
   rimraf: 3.0.2
-  tap: 15.1.6
+  tap: 15.2.1
   typescript: 4.6.2
   xo: 0.47.0
 
@@ -22,9 +22,9 @@ devDependencies:
   '@changesets/cli': 2.19.0
   '@istanbuljs/esm-loader-hook': 0.1.2
   '@types/node': 16.11.26
-  '@types/tap': 15.0.5
+  '@types/tap': 15.0.6
   rimraf: 3.0.2
-  tap: 15.1.6_typescript@4.6.2
+  tap: 15.2.1_typescript@4.6.2
   typescript: 4.6.2
   xo: 0.47.0
 
@@ -604,8 +604,8 @@ packages:
     resolution: {integrity: sha512-KQf+QAMWKMrtBMsB8/24w53tEsxllMj6TuA80TT/5igJalLI/zm0L3oXRbIAl4Ohfc85gyHX/jhMwsVkmhLU4A==}
     dev: true
 
-  /@types/tap/15.0.5:
-    resolution: {integrity: sha512-MaP+EgZNFAGRvVjHWv8ldrLvYBn4PnmAlzY7IL3/RPAPkOXdggTSTgLFONbnTpdQTe8+ixYGAySKAm9ESlZm1A==}
+  /@types/tap/15.0.6:
+    resolution: {integrity: sha512-ScXtRg7oSra4sBmq534voWPNUrbwt8q9kABA6SsEXx1qXnaxf/mf0BzfRPHW4xem7I0PlzrmWIIXP/iDNeoCvw==}
     dependencies:
       '@types/node': 16.11.26
     dev: true
@@ -2840,8 +2840,8 @@ packages:
       type-check: 0.4.0
     dev: true
 
-  /libtap/1.1.4:
-    resolution: {integrity: sha512-jM+QyAeRdVs1bJrNpjlu+l8gRdDkAehqls31AwSnqXghVLUP6nbYeU2Xfs2svYS7ZdksvnHvrxCKRBFEz/BCjA==}
+  /libtap/1.2.1:
+    resolution: {integrity: sha512-Pr/Nb/xfhtKLlRAP+jWEMEVFnwlvFmeUfuYg1WCohNO9fKkq7nxhmd5DBSVZ+0bDqAjAIkDo+rsN/sz05UJ7WA==}
     engines: {node: '>=10'}
     dependencies:
       async-hook-domain: 2.0.4
@@ -2857,7 +2857,6 @@ packages:
       tap-yaml: 1.0.0
       tcompare: 5.0.7
       trivial-deferred: 1.0.1
-      yapool: 1.0.0
     dev: true
 
   /line-column-path/3.0.0:
@@ -4058,8 +4057,8 @@ packages:
     engines: {node: '>= 0.4'}
     dev: true
 
-  /tap-mocha-reporter/5.0.1:
-    resolution: {integrity: sha512-1knFWOwd4khx/7uSEnUeaP9IPW3w+sqTgJMhrwah6t46nZ8P25atOKAjSvVDsT67lOPu0nfdOqUwoyKn+3E5pA==}
+  /tap-mocha-reporter/5.0.2:
+    resolution: {integrity: sha512-VdNiCbPLPmbLaAMfPMQs9nQ22BYjYjXa3+m8VImB/l5uCP5afV9/W30F7DNCJWi2QXWjbFnU1JaP+3iUS/kVLw==}
     engines: {node: '>= 8'}
     hasBin: true
     dependencies:
@@ -4091,8 +4090,8 @@ packages:
       yaml: 1.10.2
     dev: true
 
-  /tap/15.1.6_typescript@4.6.2:
-    resolution: {integrity: sha512-TN7xH6Q2tUPTd6qwmkhuFJcx1vUR8e4dDUpBKc61G0krOzne7Ia6aKIFb8O/0kVazachSSuVME1V8nQ2xwWL8w==}
+  /tap/15.2.1_typescript@4.6.2:
+    resolution: {integrity: sha512-4KGB35b5GWDbVxKY9qfTQgJJ95jPc8WIKkQno5EE7sLwSQCQC9ica3GtUyXuhnyGbYiuMeSrWg2kQ95j5APlNA==}
     engines: {node: '>=10'}
     hasBin: true
     peerDependencies:
@@ -4116,7 +4115,7 @@ packages:
       isexe: 2.0.0
       istanbul-lib-processinfo: 2.0.2
       jackspeak: 1.4.1
-      libtap: 1.1.4
+      libtap: 1.2.1
       minipass: 3.1.6
       mkdirp: 1.0.4
       nyc: 15.1.0
@@ -4124,7 +4123,7 @@ packages:
       rimraf: 3.0.2
       signal-exit: 3.0.7
       source-map-support: 0.5.21
-      tap-mocha-reporter: 5.0.1
+      tap-mocha-reporter: 5.0.2
       tap-parser: 10.1.0
       tap-yaml: 1.0.0
       tcompare: 5.0.7
@@ -4535,10 +4534,6 @@ packages:
   /yaml/1.10.2:
     resolution: {integrity: sha512-r3vXyErRCYJ7wg28yvBY5VSoAF8ZvlcW9/BwUzEtUsjvX/DKs24dIkuwjtuprwJJHsbyUbLApepYTR1BN4uHrg==}
     engines: {node: '>= 6'}
-    dev: true
-
-  /yapool/1.0.0:
-    resolution: {integrity: sha1-9pPymjFbUNmp2iZGp6ZkXJaYW2o=}
     dev: true
 
   /yargs-parser/18.1.3:
