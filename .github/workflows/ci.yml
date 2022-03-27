@@ -17,21 +17,21 @@ env:
   JOB_PNPM_VERSION: 6
 
 jobs:
-  ci:
+  lint:
     name: CI
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@ec3a7ce113134d7a93b817d10a8272cb61118579 # renovate: tag=v2
 
       - name: Setup Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@1f8c6b94b26d0feae1e387ca63ccbdc44d27b561 # renovate: tag=v2
         with:
           node-version: ${{ env.JOB_NODE_VERSION }}
 
       - name: Setup pnpm
-        uses: pnpm/action-setup@v2.0.1
+        uses: pnpm/action-setup@646cdf48217256a3d0b80361c5a50727664284f2 # renovate: tag=v2.0.1
         with:
           version: ${{ env.JOB_PNPM_VERSION }}
 
@@ -39,7 +39,7 @@ jobs:
         run: pnpm config set store-dir ~/.pnpm-store
 
       - name: Cache pnpm modules
-        uses: actions/cache@v2
+        uses: actions/cache@937d24475381cd9c75ae6db12cb4e79714b926ed # renovate: tag=v2
         with:
           path: ~/.pnpm-store
           key: ${{ runner.OS }}-pnpm-current-${{ hashFiles('pnpm-lock.yaml') }}
@@ -56,16 +56,12 @@ jobs:
         run: pnpm run lint
 
       - name: Run tests
-        run: pnpm run test:coverage -- --no-check-coverage
+        run: pnpm run test:coverage
 
-      ## Until esdmr/template@v2.1 is merged, coverage report will probably not
-      ## work. I have commented this so the CI does not send empty coverage
-      ## reports to CodeCov.
-      #
-      #- name: Export coverage report
-      #  run: pnpm run test:coverage-lcov -- --no-check-coverage
-      #
-      #- name: Upload report to CodeCov
-      #  uses: codecov/codecov-action@v2
-      #  with:
-      #    files: ./coverage/lcov.info
+      - name: Export coverage report
+        run: pnpm run test:coverage-lcov
+
+      - name: Upload report to CodeCov
+        uses: codecov/codecov-action@f32b3a3741e1053eb607407145bc9619351dc93b # renovate: tag=v2
+        with:
+          files: ./coverage/lcov.info
