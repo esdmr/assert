@@ -20,12 +20,12 @@ function getTracePart (error: Error) {
 
 	// Currently in all places which this function is called,
 	// `Error.captureStackTrace` is also called.
-	/* istanbul ignore next */
+	/* c8 ignore next */
 	const stack = error.stack ?? '';
 	const index = stack.indexOf(message);
 
 	// Theoretically, index should never be -1, but just in case.
-	/* istanbul ignore if */
+	/* c8 ignore next 3 */
 	if (index === -1) {
 		return stack;
 	}
