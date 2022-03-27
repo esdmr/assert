@@ -66,11 +66,11 @@ await test('PrimitiveError', async (t) => {
 
 await test('WrappedError', async (t) => {
 	class NoStackError extends Error {
-		name = 'NoStackError';
-		stack = undefined;
+		override name = 'NoStackError';
 
 		constructor () {
 			super(message);
+			delete this.stack;
 		}
 	}
 

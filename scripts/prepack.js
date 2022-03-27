@@ -44,6 +44,7 @@ async function getMetadata () {
 	delete metadata.devDependencies;
 	delete metadata.engines.pnpm;
 	delete metadata.imports['#test/*'];
+	delete metadata.packageManager;
 	delete metadata.pnpm;
 
 	for (const subpath of Object.keys(metadata.exports ?? {})) {
@@ -58,11 +59,11 @@ const metadata = await getMetadata();
 console.log('pnpm install');
 await spawn('pnpm', ['install']);
 
-console.log('pnpm run lint');
-await spawn('pnpm', ['run', 'lint']);
-
 console.log('pnpm run build');
 await spawn('pnpm', ['run', 'build']);
+
+console.log('pnpm run lint');
+await spawn('pnpm', ['run', 'lint']);
 
 console.log('pnpm run test');
 await spawn('pnpm', ['run', 'test']);

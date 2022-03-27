@@ -39,7 +39,7 @@ function getTracePart (error: Error) {
  * @public
  */
 export class AssertionError extends Error {
-	name = 'AssertionError';
+	override name = 'AssertionError';
 
 	constructor (message: string) {
 		super(message);
@@ -80,8 +80,8 @@ export class PrimitiveError extends Error {
 		return new PrimitiveError(value);
 	}
 
-	name = 'PrimitiveError';
-	stack = getErrorMessage(this);
+	override name = 'PrimitiveError';
+	override stack = getErrorMessage(this);
 	readonly value: unknown;
 
 	constructor (value: unknown) {
@@ -102,7 +102,7 @@ export class PrimitiveError extends Error {
  * @public
  */
 export class WrappedError extends Error {
-	name = 'WrappedError';
+	override name = 'WrappedError';
 	readonly thrownValue: unknown;
 
 	constructor (message: string, thrownValue: unknown) {
