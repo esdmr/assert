@@ -5,6 +5,7 @@
   "all": true,
   "clean": true,
   "exclude": [
-    "build/test"
+    "build/test",
+    "build/main.*"
   ]
 }
