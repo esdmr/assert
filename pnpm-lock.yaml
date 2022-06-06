@@ -7,7 +7,7 @@ overrides:
 packageExtensionsChecksum: 8381ec6668a830d89d827d640a385305
 
 specifiers:
-  '@babel/eslint-parser': 7.17.0
+  '@babel/eslint-parser': 7.18.2
   '@changesets/cli': 2.22.0
   '@microsoft/api-documenter': 7.13.40
   '@microsoft/api-extractor': 7.18.6
@@ -21,7 +21,7 @@ specifiers:
   xo: 0.48.0
 
 devDependencies:
-  '@babel/eslint-parser': 7.17.0
+  '@babel/eslint-parser': 7.18.2
   '@changesets/cli': 2.22.0
   '@microsoft/api-documenter': 7.13.40
   '@microsoft/api-extractor': 7.18.6
@@ -71,8 +71,8 @@ packages:
       - supports-color
     dev: true
 
-  /@babel/eslint-parser/7.17.0:
-    resolution: {integrity: sha512-PUEJ7ZBXbRkbq3qqM/jZ2nIuakUBqCYc7Qf52Lj7dlZ6zERnqisdHioL0l4wwQZnmskMeasqUNzLBFKs3nylXA==}
+  /@babel/eslint-parser/7.18.2:
+    resolution: {integrity: sha512-oFQYkE8SuH14+uR51JVAmdqwKYXGRjEXx7s+WiagVjqQ+HPE+nnwyF2qlVG8evUsUHmPcA+6YXMEDbIhEyQc5A==}
     engines: {node: ^10.13.0 || ^12.13.0 || >=14.0.0}
     peerDependencies:
       '@babel/core': '>=7.11.0'
