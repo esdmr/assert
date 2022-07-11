@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/naming-convention */
 import { test } from 'tap';
 import { testDetail } from '#test/test-util/format.js';
 import * as numbers from '#src/numbers.js';
