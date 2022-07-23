@@ -27,17 +27,17 @@ const options = {
 	stdio: 'inherit',
 };
 
-console.log('pnpm install');
-await execaCommand('pnpm install', options);
+console.log('corepack pnpm install');
+await execaCommand('corepack pnpm install', options);
 
-console.log('pnpm run build');
-await execaCommand('pnpm run build', options);
+console.log('corepack pnpm run build');
+await execaCommand('corepack pnpm run build', options);
 
-console.log('pnpm run lint');
-await execaCommand('pnpm run lint', options);
+console.log('corepack pnpm run lint');
+await execaCommand('corepack pnpm run lint', options);
 
-console.log('pnpm run test');
-await execaCommand('pnpm run test', options);
+console.log('corepack pnpm run test');
+await execaCommand('corepack pnpm run test', options);
 
 console.log('mv package.json …');
 await fs.rename('package.json', '.package.dev.json');

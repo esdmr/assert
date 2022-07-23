@@ -5,7 +5,7 @@
 [![License](https://img.shields.io/github/license/esdmr/assert?labelColor=0F0F0F&color=005C9A)][license]
 [![Documentation](https://img.shields.io/badge/documentation-005C9A)][gh-pages]
 [![NodeJS version](https://img.shields.io/badge/node-≥16-005C9A?labelColor=0F0F0F&logo=node.js&logoColor=00B834)][node]
-[![pnpm version](https://img.shields.io/badge/pnpm-6-005C9A?labelColor=0F0F0F&logo=pnpm)][pnpm]
+[![pnpm version](https://img.shields.io/badge/pnpm-via%20corepack-005C9A?labelColor=0F0F0F&logo=pnpm)][pnpm]
 
 [workflow]: https://github.com/esdmr/assert/actions/workflows/ci.yml
 [codecov]: https://codecov.io/gh/esdmr/assert
@@ -36,14 +36,11 @@ pnpm install @esdmr/assert
 This project requires [Node.JS][node] version 16 minimum. Ensure that you have
 installed the correct version of Node.JS by running `node --version`.
 
-This project recommends [pnpm][pnpm] version 6. Ensure that you have installed
-the correct version of pnpm by running `pnpm --version`.
-
 The following snippet will download, install, and build the source from GitHub:
 
 ```sh
 git clone https://github.com/esdmr/assert.git
 cd assert
-pnpm install
-pnpm run build
+corepack pnpm install
+corepack pnpm run build
 ```

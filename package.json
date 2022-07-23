@@ -78,8 +78,7 @@
     "xo": "0.50.0"
   },
   "engines": {
-    "node": ">=16",
-    "pnpm": "7"
+    "node": ">=16"
   },
   "imports": {
     "#src/*": "./build/*",
